@@ -1,5 +1,5 @@
 import { BackgroundParticles, Navbar, Footer } from "@/components/global";
-import { Hero, SocialProof } from "@/components/landing";
+import { Hero, SocialProof, Destinations } from "@/components/landing";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SocialProof />
+      <Destinations />
       <Footer />
       <BackgroundParticles />
     </div>

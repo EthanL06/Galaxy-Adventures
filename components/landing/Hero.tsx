@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
         </div>
       </div>
 
-      <div className="scroll mb-4"></div>
+      <div className="scroll mb-12"></div>
     </div>
   );
 };
