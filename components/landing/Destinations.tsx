@@ -1,61 +1,84 @@
 import Image from "next/image";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "../global";
+
 type Props = {};
 const Destinations = (props: Props) => {
+  const destinations = [
+    {
+      title: "Explore the Martian Sand Dunes",
+      location: "Mars (75.4 million mi.)",
+      image: "/mars.png",
+      alt: "Martian Sand Dunes",
+    },
+    {
+      title: "Explore the Lunar Surface",
+      location: "Moon (238,900 mi.)",
+      image: "/lunar_surface.png",
+      alt: "Lunar Surface",
+    },
+    {
+      title: "Explore a Supermassive Black Hole",
+      location: "M87 (55.8 million ly.)",
+      image: "/gargantua.png",
+      alt: "Supermassive Black Hole",
+    },
+  ];
+
   return (
     <div className="flex flex-col items-center py-16">
       <div className="text-lg font-black tracking-widest text-light-accent">
         PREMIER DESTINATIONS
       </div>
-      <div className="mt-4 text-4xl font-bold text-white">
+      <div className="mt-4 text-center text-4xl font-bold text-white">
         Our best destinations for <span className="text-dark-accent">You</span>.
       </div>
 
-      <div className="mt-16 flex w-full flex-col items-center justify-center">
-        <div className="flex w-full flex-col items-center justify-center gap-y-16  lg:gap-x-16 lg:gap-y-0">
-          <div className="pattern-dots-md">
-            <div className="flex translate-x-5 -translate-y-5 flex-col gap-y-4 rounded-xl bg-[#1F2023] p-4">
-              <div className="relative h-60 w-96 overflow-clip bg-cover">
-                <Image
-                  className="overflow-clip rounded-lg transition-all duration-700 hover:scale-150"
-                  alt="Mars"
-                  fill
-                  src="/mars.png"
-                  sizes="100vw"
-                />
-              </div>
-              <div className="text-xl font-bold">
-                Explore the sandy dunes of Mars
-              </div>
+      <div className="mt-16 flex w-full flex-col items-center justify-center px-4">
+        <div className="flex w-full flex-wrap items-center justify-center gap-16 ">
+          {destinations.map((destination, index) => (
+            <div
+              key={index}
+              className="pattern-dots-md w-full rounded-xl sm:w-96"
+            >
+              <div className="flex flex-col gap-y-4 rounded-xl bg-[#1F2023] p-4 lg:translate-x-5 lg:-translate-y-5">
+                <div className="relative h-60 w-full overflow-clip bg-cover">
+                  <Image
+                    className="overflow-clip rounded-lg transition-all duration-700 hover:scale-150"
+                    alt={destination.alt}
+                    fill
+                    src={destination.image}
+                    sizes="100vw"
+                  />
+                </div>
+                <div className="text-xl font-bold">{destination.title}</div>
 
-              <div className="flex items-center justify-between">
-                <div className="text-md font-medium text-light-accent">
-                  The Red Planet
+                <div className="text-gray-300">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
 
-                <div className="button flex cursor-pointer items-center justify-center rounded-md bg-dark-accent p-3 font-bold transition-all">
-                  Book Now
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="flex items-center gap-x-2">
+                    <FontAwesomeIcon
+                      className="text-light-accent"
+                      icon={faLocationDot}
+                    />
+                    <div className="text-md font-medium text-light-accent">
+                      {destination.location}
+                    </div>
+                  </div>
+
+                  <Button text="Book Now" />
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* <Card />
-          <Card />
-          <Card /> */}
+          ))}
         </div>
       </div>
-    </div>
-  );
-};
 
-const Card = () => {
-  return (
-    <div className="flex h-80 w-80 flex-col items-center justify-center rounded-md bg-dark-accent">
-      <div className="text-2xl font-bold text-white">Mars</div>
-      <div className="text-lg font-medium text-light-accent">
-        The Red Planet
-      </div>
+      <Button className="mt-16" text="View All Destinations" />
     </div>
   );
 };
