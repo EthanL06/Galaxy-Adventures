@@ -15,6 +15,9 @@ module.exports = {
         sans: ["Inter", "sans-serif"],
         serif: ["Jost", "serif"],
       },
+      screens: {
+        xsm: "380px",
+      },
     },
   },
   plugins: [require("tailwindcss-debug-screens")],
