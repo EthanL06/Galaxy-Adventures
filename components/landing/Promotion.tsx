@@ -7,7 +7,7 @@ type Props = {};
 const Promotion = (props: Props) => {
   return (
     <div className="grid w-full gap-x-12 bg-dark-accent/10 lg:grid-cols-2 lg:grid-rows-1 ">
-      <div className="items-between flex flex-col gap-y-4 p-24">
+      <div className="items-between flex flex-col gap-y-4 p-8 sm:p-16 md:p-24">
         <div className="text-lg font-black tracking-widest text-light-accent">
           THE EXPERIENCE
         </div>

@@ -26,13 +26,24 @@ const Journey = (props: Props) => {
     },
   ];
 
+  // As the user scrolls down the page, the current step should be highlighted in light accent color
+
   return (
-    <div className="w-full bg-[#1e1e20]">
-      <div className="flex flex-col gap-32">
+    <div className="w-full py-32 px-8">
+      <div className="flex flex-col items-center gap-32">
+        <div className="flex flex-col items-center">
+          <div className="text-lg font-black tracking-widest text-light-accent">
+            THE JOURNEY
+          </div>
+          <div className="mt-4 text-center text-4xl font-bold">
+            A <span className="text-dark-accent">timeline</span> of your
+            journey.
+          </div>
+        </div>
         {steps.map((step, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center gap-4"
+            className="flex h-[30vh] flex-col items-center justify-center gap-4 text-center"
           >
             <div className="flex w-16 items-center justify-center rounded-full bg-light-accent/10 text-4xl font-bold leading-[4rem] text-white">
               {index + 1}
