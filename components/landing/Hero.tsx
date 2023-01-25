@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type Props = {};
 const Hero = (props: Props) => {
   return (

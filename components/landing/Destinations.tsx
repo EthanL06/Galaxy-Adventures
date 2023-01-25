@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -35,16 +36,33 @@ const Destinations = (props: Props) => {
   ];
 
   return (
-    <div className="flex flex-col items-center py-16">
-      <div className="text-lg font-black tracking-widest text-light-accent">
+    <div className="flex flex-col items-center py-24">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="text-lg font-black tracking-widest text-light-accent"
+      >
         PREMIER DESTINATIONS
-      </div>
-      <div className="mt-4 text-center text-4xl font-bold text-white">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-4 text-center text-4xl font-bold text-white"
+      >
         Our best destinations for <span className="text-dark-accent">You</span>.
-      </div>
-
+      </motion.div>
       <div className="mt-16 flex w-full flex-col items-start justify-center px-4">
-        <div className="flex w-full flex-wrap items-start justify-center gap-16 ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="flex w-full flex-wrap items-start justify-center gap-16 "
+        >
           {destinations.map((destination, index) => (
             <div
               key={index}
@@ -87,10 +105,17 @@ const Destinations = (props: Props) => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <Button className="mt-16" text="View All Destinations" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <Button className="mt-16" text="View All Destinations" />
+      </motion.div>
     </div>
   );
 };

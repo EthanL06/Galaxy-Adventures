@@ -1,13 +1,26 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Props = {};
 const SocialProof = (props: Props) => {
   return (
     <div className="pattern-dots-xl bg-[#1e1e20]  py-16 text-center text-white/5">
-      <div className="text-4xl font-bold text-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="text-4xl font-bold text-white"
+      >
         Trusted by the <span className="text-dark-accent">Best</span>.
-      </div>
-      <div className="pointer-events-none mt-12 flex select-none flex-wrap items-center justify-center gap-16">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="pointer-events-none mt-12 flex select-none flex-wrap items-center justify-center gap-16"
+      >
         <Image
           className="grayscale"
           src="/nasa.svg"
@@ -44,7 +57,7 @@ const SocialProof = (props: Props) => {
           height={200}
           alt="ESA logo"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

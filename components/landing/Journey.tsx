@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 type Props = {};
 
 const Journey = (props: Props) => {
@@ -45,12 +45,24 @@ const Journey = (props: Props) => {
             key={index}
             className="relative flex h-[30vh] flex-col items-center justify-center gap-4 text-center"
           >
-            <div className="relative flex w-16 items-center justify-center rounded-full bg-[#32323F] text-center text-4xl font-bold leading-[4rem] text-white">
+            <motion.div
+              initial={{ backgroundColor: "rgb(97 77 226 / 0.05)" }}
+              whileInView={{ backgroundColor: "rgb(97 77 226)" }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="relative flex w-16 items-center justify-center rounded-full bg-[#32323F] text-center text-4xl font-bold leading-[4rem] text-white"
+            >
               {index + 1}
               {index !== steps.length - 1 && (
-                <div className="absolute top-16 hidden h-[22.88rem] w-1 bg-light-accent/5 md:block" />
+                <motion.div
+                  initial={{ backgroundColor: "rgb(158 145 237 / 0.05)" }}
+                  whileInView={{ backgroundColor: "rgb(158 145 237 / 0.25)" }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  className="absolute top-16 hidden h-[22.88rem] w-1 bg-dark-accent/5 md:block"
+                />
               )}
-            </div>
+            </motion.div>
 
             <div className="text-4xl font-bold text-white">{step.title}</div>
             <div className="text-lg text-gray-300">{step.description}</div>
