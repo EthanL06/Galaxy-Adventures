@@ -22,7 +22,7 @@ const Promotion = (props: Props) => {
           are endless. Imagine the sensation of weightlessness as you float in
           zero-gravity, or the awe-inspiring view of our planet from orbit. Take
           the ultimate step and stand on the surface of another celestial body,
-          where you'll witness the vast expanse of the universe in a way that
+          where you will witness the vast expanse of the universe in a way that
           only a select few have experienced. Join us on a journey to the stars
           and back, and make memories that will last a lifetime.
         </div>
