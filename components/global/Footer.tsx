@@ -197,7 +197,7 @@ const Footer = (props: Props) => {
             </div>
           </div>
           <p className="mt-16 hidden border-t border-[rgb(255,255,255,0.2)] pt-12 text-sm text-gray-400 lg:block lg:text-center">
-            © 2022. All rights reserved.
+            © 2023. All rights reserved.
           </p>
         </div>
       </div>

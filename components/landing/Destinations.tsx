@@ -41,9 +41,9 @@ const Destinations = (props: Props) => {
           {destinations.map((destination, index) => (
             <div
               key={index}
-              className="pattern-dots-md w-full rounded-xl sm:w-96"
+              className="pattern-dots-md w-full rounded-xl border-2 border-dark-accent text-dark-accent sm:w-96 "
             >
-              <div className="flex flex-col gap-y-4 rounded-xl bg-[#1F2023] p-4 lg:translate-x-5 lg:-translate-y-5">
+              <div className=" flex flex-col gap-y-4 rounded-xl bg-[#1F2023] p-4 lg:translate-x-5 lg:-translate-y-5">
                 <div className="relative h-60 w-full overflow-clip bg-cover">
                   <Image
                     className="overflow-clip rounded-lg transition-all duration-700 hover:scale-150"
@@ -53,7 +53,9 @@ const Destinations = (props: Props) => {
                     sizes="100vw"
                   />
                 </div>
-                <div className="text-xl font-bold">{destination.title}</div>
+                <div className="text-xl font-bold text-white">
+                  {destination.title}
+                </div>
 
                 <div className="text-gray-300">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -70,7 +72,7 @@ const Destinations = (props: Props) => {
                     </div>
                   </div>
 
-                  <Button text="Book Now" />
+                  <Button text="Book Now" className="text-white" />
                 </div>
               </div>
             </div>

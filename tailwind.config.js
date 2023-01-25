@@ -8,14 +8,14 @@ module.exports = {
     extend: {
       colors: {
         background: "#26272B",
-        'light-accent': '#9E91ED',
-        'dark-accent': '#614DE2',
+        "light-accent": "#9E91ED",
+        "dark-accent": "#614DE2",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         serif: ["Jost", "serif"],
-      }
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [require("tailwindcss-debug-screens")],
+};

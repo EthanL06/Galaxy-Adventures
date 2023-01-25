@@ -16,7 +16,7 @@ export default function Document() {
         ></link>
         <link href="https://unpkg.com/pattern.css" rel="stylesheet"></link>
       </Head>
-      <body>
+      <body className="debug-screens">
         <Main />
         <NextScript />
       </body>
