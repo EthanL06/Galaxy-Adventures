@@ -55,7 +55,11 @@ const Testimonials = (props: Props) => {
 
       <div className="mt-16 flex w-full flex-wrap items-center justify-center gap-16 sm:w-auto">
         {testimonials.map((testimonial, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
             key={index}
             className="flex w-96 flex-col gap-y-4 rounded-md border border-[#ffffff12] bg-background p-4"
           >
@@ -84,7 +88,7 @@ const Testimonials = (props: Props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

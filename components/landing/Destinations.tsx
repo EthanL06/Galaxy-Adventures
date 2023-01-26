@@ -57,8 +57,8 @@ const Destinations = (props: Props) => {
       </motion.div>
       <div className="mt-16 flex w-full flex-col items-start justify-center px-4">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
           className="flex w-full flex-wrap items-start justify-center gap-16 "
@@ -109,8 +109,8 @@ const Destinations = (props: Props) => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
