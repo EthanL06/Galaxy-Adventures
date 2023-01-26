@@ -56,15 +56,13 @@ const Destinations = (props: Props) => {
         Our best destinations for <span className="text-dark-accent">You</span>.
       </motion.div>
       <div className="mt-16 flex w-full flex-col items-start justify-center px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="flex w-full flex-wrap items-start justify-center gap-16 "
-        >
+        <div className="flex w-full flex-wrap items-start justify-center gap-16 ">
           {destinations.map((destination, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
               key={index}
               className="pattern-dots-md w-full rounded-xl border-2 border-dark-accent text-dark-accent sm:w-96"
             >
@@ -103,9 +101,9 @@ const Destinations = (props: Props) => {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       <motion.div
