@@ -1,5 +1,13 @@
 import { BackgroundParticles, Navbar, Footer } from "@/components/global";
-import { Hero, SocialProof, Destinations, Promotion, Journey, Testimonials  } from "@/components/landing";
+import {
+  Hero,
+  SocialProof,
+  Destinations,
+  Promotion,
+  Journey,
+  Testimonials,
+  CallToAction,
+} from "@/components/landing";
 
 export default function Home() {
   return (
@@ -11,6 +19,7 @@ export default function Home() {
       <Promotion />
       <Journey />
       <Testimonials />
+      <CallToAction />
       <Footer />
       <BackgroundParticles />
     </div>

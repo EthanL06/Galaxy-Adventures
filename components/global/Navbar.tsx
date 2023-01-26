@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between p-12">
+    <nav className="flex items-center justify-between p-12 opacity-0">
       <Link href={"/"} passHref legacyBehavior>
         <a>
           <Image src={"/logo.svg"} width={80} height={80} alt="logo" />

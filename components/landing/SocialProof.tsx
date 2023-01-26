@@ -17,7 +17,7 @@ const SocialProof = (props: Props) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
         className="pointer-events-none mt-12 flex select-none flex-wrap items-center justify-center gap-16"
       >
