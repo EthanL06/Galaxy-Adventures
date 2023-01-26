@@ -7,13 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#1F2023",
+        background: "#26272B",
+        "light-accent": "#9E91ED",
+        "dark-accent": "#614DE2",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         serif: ["Jost", "serif"],
-      }
+      },
+      screens: {
+        xsm: "380px",
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [require("tailwindcss-debug-screens")],
+};

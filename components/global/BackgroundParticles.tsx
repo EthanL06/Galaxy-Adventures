@@ -24,7 +24,7 @@ const BackgroundParticles = () => {
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
-      className="fixed w-full z-0"
+      className="fixed z-0 w-full"
       options={{
         particles: {
           number: {
@@ -81,7 +81,7 @@ const BackgroundParticles = () => {
           },
           move: {
             enable: true,
-            speed: 0.1,
+            speed: 0.2,
             direction: "none",
             random: false,
             straight: false,
