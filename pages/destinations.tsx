@@ -17,12 +17,13 @@ const Destinations = () => {
   );
 
   useEffect(() => {
+    console.log(data);
     setDestinations(data);
     setFilteredDestinations(data);
   }, [data]);
 
   useEffect(() => {
-    if (search === "") {
+    if (search.trim() === "") {
       setFilteredDestinations(destinations);
     } else {
       setFilteredDestinations(
@@ -33,7 +34,7 @@ const Destinations = () => {
         })
       );
     }
-  }, [search]);
+  }, [destinations, search]);
 
   return (
     <>
