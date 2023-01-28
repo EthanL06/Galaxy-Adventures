@@ -8,7 +8,7 @@ import { Destination } from "@/types/destination";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Destinations = () => {
-  const { data, error } = useSWR("/api/destinations", fetcher);
+  const { data, error, isLoading } = useSWR("/api/destinations", fetcher);
 
   const [search, setSearch] = useState("");
   const [destinations, setDestinations] = useState([] as Destination[]);
@@ -45,7 +45,7 @@ const Destinations = () => {
         </div>
 
         <Search search={search} setSearch={setSearch} />
-        <List destinations={filteredDestinations} />
+        <List destinations={filteredDestinations} isLoading={isLoading} />
       </div>
       <Footer />
     </>

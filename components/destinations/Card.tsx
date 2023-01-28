@@ -24,6 +24,7 @@ const Card = ({ title, distance, duration, cost, image }: Props) => {
       <div className="relative flex h-60 w-full overflow-clip  sm:w-96">
         <img
           src={image}
+          loading="lazy"
           className="h-60 w-full overflow-clip rounded-lg object-cover transition-all duration-700 hover:cursor-pointer group-hover:scale-125 sm:w-96"
         />
       </div>
