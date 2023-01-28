@@ -20,7 +20,7 @@ type Props = {
 
 const Card = ({ title, distance, duration, cost, image }: Props) => {
   return (
-    <div className="group flex w-full flex-col gap-y-2 hover:cursor-pointer sm:w-96">
+    <div className="group flex w-full flex-col gap-y-2  text-white hover:cursor-pointer sm:w-96">
       <div className="relative flex h-60 w-full overflow-clip  sm:w-96">
         <img
           src={image}
