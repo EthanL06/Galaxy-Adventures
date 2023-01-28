@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,8 @@ import { useEffect, useState } from "react";
 
 type Props = {};
 const Destinations = (props: Props) => {
+  const router = useRouter();
+
   const destinations = [
     {
       title: "Explore the Martian Sand Dunes",
@@ -112,7 +115,14 @@ const Destinations = (props: Props) => {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <Button className="mt-16" text="View All Destinations" />
+        <Button
+          className="mt-16"
+          text="View All Destinations"
+          onClick={() => {
+            console.log("View All Destinations");
+            router.push("/destinations");
+          }}
+        />
       </motion.div>
     </div>
   );

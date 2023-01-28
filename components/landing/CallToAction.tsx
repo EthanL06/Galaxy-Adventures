@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 type Props = {};
 const CallToAction = (props: Props) => {
   return (
-    <div className="flex w-full items-center justify-center bg-[#1e1e20]  py-24 lg:px-12 xl:px-48">
+    <div className="flex w-full items-center justify-center bg-dark-background  py-24 lg:px-12 xl:px-48">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

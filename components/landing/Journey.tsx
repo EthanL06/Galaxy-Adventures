@@ -55,11 +55,8 @@ const Journey = (props: Props) => {
           </motion.div>
         </div>
         {steps.map((step, index) => (
-          <>
-            <div
-              key={index}
-              className="relative flex h-[30vh] flex-col items-center justify-center gap-4 text-center"
-            >
+          <div className="flex flex-col items-center gap-32" key={index}>
+            <div className="relative flex h-[30vh] flex-col items-center justify-center gap-4 text-center">
               <motion.div
                 initial={{ backgroundColor: "rgb(97 77 226 / 0.05)" }}
                 whileInView={{ backgroundColor: "rgb(97 77 226)" }}
@@ -68,15 +65,6 @@ const Journey = (props: Props) => {
                 className="relative flex w-16 items-center justify-center rounded-full bg-[#32323F] text-center text-4xl font-bold leading-[4rem] text-white"
               >
                 {index + 1}
-                {/* {index !== steps.length - 1 && (
-                <motion.div
-                  initial={{ backgroundColor: "rgb(158 145 237 / 0.05)" }}
-                  whileInView={{ backgroundColor: "rgb(158 145 237 / 0.15)" }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  viewport={{ once: true }}
-                  className="absolute top-16 hidden h-[22.88rem] w-1 bg-dark-accent/5 md:block"
-                />
-              )} */}
               </motion.div>
 
               <motion.div
@@ -107,7 +95,7 @@ const Journey = (props: Props) => {
                 />
               </motion.div>
             )}
-          </>
+          </div>
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 type Props = {};
 const SocialProof = (props: Props) => {
   return (
-    <div className="pattern-dots-xl bg-[#1e1e20]  py-16 text-center text-white/5">
+    <div className="pattern-dots-xl bg-dark-background  py-16 text-center text-white/5">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

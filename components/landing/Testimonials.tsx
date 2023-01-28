@@ -30,7 +30,7 @@ const Testimonials = (props: Props) => {
   ];
 
   return (
-    <div className="flex w-full flex-col items-center bg-[#1e1e20] py-24 px-4 sm:px-8">
+    <div className="flex w-full flex-col items-center bg-dark-background py-24 px-4 sm:px-8">
       <div className="flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0 }}

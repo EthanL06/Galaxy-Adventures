@@ -9,6 +9,7 @@ type Props = {
 const Button = ({ text, onClick, className }: Props) => {
   return (
     <div
+      onClick={onClick}
       className={`button flex cursor-pointer items-center justify-center rounded-md bg-dark-accent p-3 font-bold transition-all ${className}`}
     >
       {text}
