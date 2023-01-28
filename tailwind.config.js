@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -16,10 +19,14 @@ module.exports = {
         sans: ["Inter", "sans-serif"],
         serif: ["Jost", "serif"],
       },
-      screens: {
+    },
+    screens: {
+        ...defaultTheme.screens,
         xsm: "380px",
-      },
+        mdd: "843px",
+        lgg: "1237px",
+        xl: "1633px",
     },
   },
-  plugins: [require("tailwindcss-debug-screens")],
+  plugins: [require('tailwindcss-debug-screens')],
 };

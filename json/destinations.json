@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Low Earth Orbit",
+    "distance": "1,200 mi.",
+    "distanceValue": 1200,
+    "duration": "1 month",
+    "durationValue": 30,
+    "cost": "$50,000",
+    "costValue": 50000,
+    "image": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "title": "Moon",
+    "distance": "238,900 mi.",
+    "distanceValue": 238900,
+    "duration": "1 week",
+    "durationValue": 7,
+    "cost": "$300,000",
+    "costValue": 300000,
+    "image": "https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80"
+  },
+  {
+    "title": "Mars",
+    "distance": "75.4 million mi.",
+    "distanceValue": 75400000,
+    "duration": "21 months",
+    "durationValue": 630,
+    "cost": "$1 million",
+    "costValue": 1000000,
+    "image": "https://media.istockphoto.com/id/1214890390/photo/planet-mars-in-space.jpg?s=612x612&w=0&k=20&c=zbmCpu6vaD036-6HQNOzHO1qz0tEjUa7boJaoaWG6B0="
+  },
+  {
+    "title": "Venus",
+    "distance": "67.2 million mi.",
+    "distanceValue": 67200000,
+    "duration": "18 months",
+    "durationValue": 540,
+    "cost": "$1 million",
+    "costValue": 1000000,
+    "image": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "title": "Jupiter",
+    "distance": "484 million mi.",
+    "distanceValue": 484000000,
+    "duration": "3 years",
+    "durationValue": 1095,
+    "cost": "$5 million",
+    "costValue": 5000000,
+    "image": "https://images.unsplash.com/photo-1630839437035-dac17da580d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80"
+  },
+  {
+    "title": "Saturn",
+    "distance": "886 million mi.",
+    "distanceValue": 886000000,
+    "duration": "5 years",
+    "durationValue": 1825,
+    "cost": "$10 million",
+    "costValue": 10000000,
+    "image": "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "title": "Uranus",
+    "distance": "1.8 billion mi.",
+    "distanceValue": 1800000000,
+    "duration": "8 years",
+    "durationValue": 2920,
+    "cost": "$15 million",
+    "costValue": 15000000,
+    "image": "https://images.unsplash.com/photo-1614732484003-ef9881555dc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "title": "Neptune",
+    "distance": "2.8 billion mi.",
+    "distanceValue": 2800000000,
+    "duration": "12 years",
+    "durationValue": 4380,
+    "cost": "$20 million",
+    "costValue": 20000000,
+    "image": "https://images.unsplash.com/photo-1614728423169-3f65fd722b7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+  },
+  {
+    "title": "Pluto",
+    "distance": "3.7 billion mi.",
+    "distanceValue": 3700000000,
+    "duration": "15 years",
+    "durationValue": 5475,
+    "cost": "$25 million",
+    "costValue": 25000000,
+    "image": "https://images.unsplash.com/photo-1614314107768-6018061b5b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
+  {
+    "title": "Gargantua",
+    "distance": "10 billion ly.",
+    "distanceValue": 10000000000000,
+    "duration": "25 years",
+    "durationValue": 9125,
+    "cost": "$100 million",
+    "costValue": 100000000,
+    "image": "/gargantua.png"
+  }
+]
