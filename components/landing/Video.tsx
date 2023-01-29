@@ -35,9 +35,8 @@ const Video = (props: Props) => {
           className="mt-16 aspect-video w-full rounded-lg lg:w-[60rem]"
           src="https://www.youtube.com/embed/P0AAnAvX64g"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen={true}
         ></iframe>
       </motion.div>
     </div>
