@@ -56,7 +56,7 @@ const Destinations = (props: Props) => {
         viewport={{ once: true }}
         className="mt-4 text-center text-4xl font-bold text-white"
       >
-        Our best destinations for <span className="text-dark-accent">You</span>.
+        Our best destinations for <span className="text-dark-accent">you</span>.
       </motion.div>
       <div className="mt-16 flex w-full flex-col items-start justify-center px-4">
         <div className="flex w-full flex-wrap items-start justify-center gap-16 ">

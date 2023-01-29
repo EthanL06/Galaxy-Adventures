@@ -10,21 +10,21 @@ const Testimonials = (props: Props) => {
       name: "John Doe",
       title: "CEO of Company",
       description:
-        '"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sapiente nulla, saepe ullam architecto culpa est quod fuga dolores autem, rem ipsa quis labore quae non veniam? Voluptatum, voluptas qui."',
+        '"I recently took a tour with Galaxy Adventures and it was an incredible experience. From start to finish, the staff was professional and accommodating, and the tour itself was out of this world (literally). The spacecraft was state-of-the-art and provided a smooth ride with breathtaking views of Earth and the stars. The guides were knowledgeable and provided interesting facts and information throughout the journey. I would highly recommend Galaxy Adventures  to anyone looking for an unforgettable experience."',
       image: "/",
     },
     {
       name: "John Doe",
       title: "CEO of Company",
       description:
-        '"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sapiente nulla, saepe ullam architecto culpa est quod fuga dolores autem, rem ipsa quis labore quae non veniam? Voluptatum, voluptas qui."',
+        '"The destinations visited were absolutely breathtaking. The views of the galaxy, planets and stars were truly mesmerizing and the tour was planned to perfection offering the perfect balance of adventure and relaxation. I would highly recommend Galaxy Adventures to anyone looking for an out of this world experience with pretty destinations."',
       image: "/",
     },
     {
       name: "John Doe",
       title: "CEO of Company",
       description:
-        '"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sapiente nulla, saepe ullam architecto culpa est quod fuga dolores autem, rem ipsa quis labore quae non veniam? Voluptatum, voluptas qui."',
+        '"The staff, spacecraft, and guides were excellent, but what really stood out was the luxurious housing provided. The accommodation was elegant, spacious and comfortable, with large windows that offered stunning views of the galaxy. The bathrooms were luxurious and modern. I highly recommend Galaxy Adventures for a unique and unforgettable experience with luxurious housing."',
       image: "/",
     },
   ];
@@ -53,7 +53,7 @@ const Testimonials = (props: Props) => {
         </motion.div>
       </div>
 
-      <div className="mt-16 flex w-full flex-wrap items-center justify-center gap-16 sm:w-auto">
+      <div className="mt-16 flex w-full flex-wrap items-start justify-center gap-16 sm:w-auto">
         {testimonials.map((testimonial, index) => (
           <motion.div
             initial={{ opacity: 0, y: 20 }}

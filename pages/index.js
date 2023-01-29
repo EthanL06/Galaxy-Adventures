@@ -4,6 +4,7 @@ import {
   SocialProof,
   Destinations,
   Promotion,
+  Video,
   Journey,
   Testimonials,
   CallToAction,
@@ -18,6 +19,7 @@ export default function Home() {
       <Destinations />
       <Promotion />
       <Journey />
+      <Video />
       <Testimonials />
       <CallToAction />
       <Footer />

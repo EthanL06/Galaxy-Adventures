@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useSWR from "swr";
 
-import { Navbar, Footer } from "@/components/global";
+import { Navbar, Footer, BackgroundParticles } from "@/components/global";
 import { Search, List } from "@/components/destinations";
 import { Destination } from "@/types/destination";
 
@@ -37,7 +37,7 @@ const Destinations = () => {
   }, [destinations, search]);
 
   return (
-    <>
+    <div className="flex flex-col">
       <Navbar />
       <div className="flex flex-col items-center gap-y-8">
         <div className="text-3xl font-bold xsm:text-4xl">
@@ -48,7 +48,8 @@ const Destinations = () => {
         <List destinations={filteredDestinations} isLoading={isLoading} />
       </div>
       <Footer />
-    </>
+      <BackgroundParticles />
+    </div>
   );
 };
 export default Destinations;

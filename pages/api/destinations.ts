@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { Destination } from "@/types/destination";
 
 import path from "path";
 import { promises as fs } from "fs";
@@ -16,7 +17,22 @@ export default async function handler(
   );
 
   // Parse the json data file
-  const destinations = JSON.parse(fileContents);
+  const destinations: Destination[] = JSON.parse(fileContents);
+  const { destination } = req.query;
+
+  if (destination) {
+    const filtered = destinations.filter(
+      (item) => item.title.toLowerCase() === destination.toLowerCase()
+    );
+
+    if (filtered.length > 0) {
+      res.status(200).json(filtered[0]);
+      return;
+    } else {
+      res.status(404).json({ message: "Destination not found" });
+      return;
+    }
+  }
 
   //Return the content of the data file in json format
   res.status(200).json(destinations);

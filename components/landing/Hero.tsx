@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-
+import { useRouter } from "next/router";
 type Props = {};
 const Hero = (props: Props) => {
+  const router = useRouter();
+
   return (
     <div className="relative flex min-h-[calc(100vh-161px)] flex-col items-center justify-between p-4">
       <div></div>
@@ -30,8 +32,9 @@ const Hero = (props: Props) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="button mr-0 mb-2 mt-6 flex h-12 w-80 cursor-pointer items-center justify-center rounded-md bg-dark-accent font-bold transition-colors sm:mr-4 sm:mb-0 sm:w-52 lg:mr-6"
+          onClick={() => router.push("/destinations")}
         >
-          Get Started
+          View Destinations
         </motion.div>
       </div>
 
