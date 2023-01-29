@@ -31,7 +31,7 @@ const Listing = ({ destination }: Props) => {
   const { title, distance, duration, cost, image, overview } = destination;
 
   return (
-    <div className="lgg:px-24  min-h-screen px-6 pb-16 lg:px-12 xl:px-52">
+    <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
       <div className="mt-8 mb-4 flex items-center justify-between">
         <button
           onClick={() => router.back()}
@@ -119,7 +119,7 @@ const Listing = ({ destination }: Props) => {
             <div>
               <h2 className="text-3xl font-bold">Safety</h2>
               <p className="mt-1 text-lg font-semibold text-gray-400">
-                What we do to keep you safe.
+                Our number one priority.
               </p>
             </div>
 
@@ -146,8 +146,8 @@ const Listing = ({ destination }: Props) => {
               </span>
             </h2>
 
-            <div className="xsm:grid-cols-2 xsm:grid-rows-2 grid grid-cols-1 grid-rows-3 rounded-lg ">
-              <div className="xsm:rounded-tr-none col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2">
+            <div className="grid grid-cols-1 grid-rows-3 rounded-lg xsm:grid-cols-2 xsm:grid-rows-2 ">
+              <div className="col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2 xsm:rounded-tr-none">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     DEPARTURE
@@ -162,7 +162,7 @@ const Listing = ({ destination }: Props) => {
                   />
                 </button>
               </div>
-              <div className="xsm:rounded-tr-lg xsm:border-l-0 col-span-1 row-span-1 flex items-center justify-between border border-gray-400 px-3 py-2">
+              <div className="col-span-1 row-span-1 flex items-center justify-between border border-gray-400 px-3 py-2 xsm:rounded-tr-lg xsm:border-l-0">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     RETURN
@@ -177,7 +177,7 @@ const Listing = ({ destination }: Props) => {
                   />
                 </button>
               </div>
-              <div className="xsm:col-span-2 xsm:row-span-2 col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2">
+              <div className="col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2 xsm:col-span-2 xsm:row-span-2">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     TICKETS
@@ -196,38 +196,38 @@ const Listing = ({ destination }: Props) => {
 
             <div className="flex flex-col gap-y-6">
               <div className="mt-4 flex flex-col gap-y-2">
-                <h2 className="xsm:text-left text-center text-2xl font-bold">
+                <h2 className="text-center text-2xl font-bold xsm:text-left">
                   SELECT TRAINING PACKAGE
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400  lg:h-32 lg:w-32"></div>
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
                 </div>
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <h2 className="xsm:text-left text-center text-2xl font-bold">
+                <h2 className="text-center text-2xl font-bold xsm:text-left">
                   SELECT VEHICLE
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400  lg:h-32 lg:w-32"></div>
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
                 </div>
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <h2 className="xsm:text-left text-center text-2xl font-bold">
+                <h2 className="text-center text-2xl font-bold xsm:text-left">
                   SELECT RECOVERY STRATEGY
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400  lg:h-32 lg:w-32"></div>
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
-                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
                 </div>
               </div>
             </div>
