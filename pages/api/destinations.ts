@@ -21,6 +21,11 @@ export default async function handler(
   const { destination } = req.query;
 
   if (destination) {
+    if (typeof destination !== "string") {
+      res.status(400).json({ message: "Bad request" });
+      return;
+    }
+
     const filtered = destinations.filter(
       (item) => item.title.toLowerCase() === destination.toLowerCase()
     );
