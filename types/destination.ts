@@ -5,6 +5,8 @@ export type Destination = {
   cost: string;
   image: string;
 
+  overview: string;
+
   distanceValue: number;
   durationValue: number;
   costValue: number;

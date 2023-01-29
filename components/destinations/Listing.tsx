@@ -2,7 +2,7 @@ import { Destination } from "@/types/destination";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faEdit } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "../global";
+import { Button, Breadcrumbs } from "../global";
 
 type Props = {
   destination: Destination;
@@ -20,10 +20,11 @@ const Listing = ({ destination }: Props) => {
     );
   }
 
-  const { title, distance, duration, cost, image } = destination;
+  const { title, distance, duration, cost, image, overview } = destination;
 
   return (
     <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
+      <Breadcrumbs />
       <div className="grid grid-cols-4 grid-rows-2 items-center gap-2 sm:gap-4 lg:gap-8">
         <img
           className="col-span-2 row-span-2 h-full w-full rounded-tl-lg rounded-bl-lg object-cover"
@@ -97,15 +98,7 @@ const Listing = ({ destination }: Props) => {
             </button>
           </div>
 
-          <div className="text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quod,
-            explicabo sequi repellendus facilis, cumque obcaecati, maiores
-            dignissimos quisquam voluptatem eveniet accusantium fuga recusandae
-            sit rem? Voluptatibus deserunt aut excepturi odio qui aliquam quidem
-            cupiditate iusto obcaecati totam. Necessitatibus sint reprehenderit
-            vel! Ipsam, deleniti quam nulla perspiciatis minus perferendis
-            libero?
-          </div>
+          <div className="text-gray-400">{overview}</div>
 
           <hr id="amenities" className="my-4 rounded-full border-gray-400" />
 
@@ -287,7 +280,7 @@ const Listing = ({ destination }: Props) => {
               </div>
             </div>
 
-            <Button text="Book Now" />
+            <Button text="Book Now" className="mt-4" />
           </div>
         </div>
       </div>
