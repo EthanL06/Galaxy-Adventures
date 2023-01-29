@@ -249,26 +249,42 @@ const Listing = ({ destination }: Props) => {
               </div>
             </div>
 
-            <div className="mt-4">
-              <h2 className="text-center text-2xl font-bold xsm:text-left">
-                SELECT TRAINING PACKAGE
-              </h2>
+            <div className="flex flex-col gap-y-6">
+              <div className="mt-4 flex flex-col gap-y-2">
+                <h2 className="text-center text-2xl font-bold xsm:text-left">
+                  SELECT TRAINING PACKAGE
+                </h2>
 
-              <div className="mt-4 flex flex-col gap-y-4">
-                <div className="flex items-center justify-between"></div>
+                <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                </div>
               </div>
-            </div>
 
-            <div className="">
-              <h2 className="text-center text-2xl font-bold xsm:text-left">
-                SELECT VEHICLE
-              </h2>
-            </div>
+              <div className="flex flex-col gap-y-2">
+                <h2 className="text-center text-2xl font-bold xsm:text-left">
+                  SELECT VEHICLE
+                </h2>
 
-            <div className="">
-              <h2 className="text-center text-2xl font-bold xsm:text-left">
-                SELECT RECOVERY STRATEGY
-              </h2>
+                <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <h2 className="text-center text-2xl font-bold xsm:text-left">
+                  SELECT RECOVERY STRATEGY
+                </h2>
+
+                <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                </div>
+              </div>
             </div>
 
             <Button text="Book Now" />

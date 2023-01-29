@@ -19,6 +19,7 @@ const Destinations = (props: Props) => {
       alt: "Martian Sand Dunes",
       description:
         "A vast and constantly shifting landscape, the sand dunes are shaped by the harsh winds of the Red Planet. It can reach heights of up to 100 meters, and offer a stunning view of the surrounding Martian terrain.",
+      link: "/destinations/mars",
     },
     {
       title: "Explore the Lunar Surface",
@@ -27,6 +28,7 @@ const Destinations = (props: Props) => {
       alt: "Lunar Surface",
       description:
         "Take a guided tour of the Lunar Surface and witness the famous lunar landmarks such as the Sea of Tranquility and the Tycho crater, also experience the thrill of low gravity and a unique opportunity to witness the Earth rise and set from a different perspective.",
+      link: "/destinations/moon",
     },
     {
       title: "Explore a Supermassive Black Hole",
@@ -35,6 +37,7 @@ const Destinations = (props: Props) => {
       alt: "Supermassive Black Hole",
       description:
         "Witness the immense power of a black hole. Observe how it bends and distorts light, and experience the sensation of being on the brink of a singularity. Get a glimpse of the intense gravitational pull and understand the mysteries that remain unsolved about these powerful objects in the universe. DISCLAIMER: Requires the use of a wormhole. Travelers may also experience time dilation.",
+      link: "/destinations/gargantua",
     },
   ];
 
@@ -101,6 +104,9 @@ const Destinations = (props: Props) => {
                   <Button
                     text="Book Now"
                     className="w-full text-white xsm:w-auto"
+                    onClick={() => {
+                      router.push(destination.link);
+                    }}
                   />
                 </div>
               </div>
@@ -119,7 +125,6 @@ const Destinations = (props: Props) => {
           className="mt-16"
           text="View All Destinations"
           onClick={() => {
-            console.log("View All Destinations");
             router.push("/destinations");
           }}
         />
