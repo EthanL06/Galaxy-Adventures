@@ -18,10 +18,12 @@ const Breadcrumbs = (props: Props) => {
   // Add home to the beginning of the array
   pathArray.unshift({ breadcrumb: "home", href: "/" });
 
-  // Capitalize the first letter of each breadcrumb
+  // Capitalize the first letter of each word in the breadcrumb
   pathArray.forEach((path) => {
-    path.breadcrumb =
-      path.breadcrumb.charAt(0).toUpperCase() + path.breadcrumb.slice(1);
+    path.breadcrumb = path.breadcrumb
+      .split("%20")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   });
 
   console.log(pathArray);

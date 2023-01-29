@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useSWR from "swr";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "./Card";
 import { Destination } from "@/types/destination";
@@ -24,7 +26,9 @@ const List = ({ destinations, isLoading }: Props) => {
     return (
       <div className="min-h-screen w-full bg-dark-background p-8 ">
         <div className="flex w-full flex-col items-center justify-center gap-y-2">
-          <h1 className="text-4xl font-bold">Loading...</h1>
+          <div className="flex h-96 items-center justify-center">
+            <FontAwesomeIcon icon={faSpinner} spin size="3x" />
+          </div>
         </div>
       </div>
     );

@@ -1,8 +1,14 @@
 import { Destination } from "@/types/destination";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faEdit } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faEdit,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
 import { Button, Breadcrumbs } from "../global";
+import useSWR from "swr";
+import Card from "./Card";
 
 type Props = {
   destination: Destination;
@@ -12,9 +18,11 @@ const Listing = ({ destination }: Props) => {
 
   if (!destination) {
     return (
-      <div className="min-h-screen w-full p-8 ">
+      <div className="min-h-screen w-full p-8">
         <div className="flex w-full flex-col items-center justify-center gap-y-2">
-          <h1 className="text-4xl font-bold">Loading...</h1>
+          <div className="flex h-96 items-center justify-center">
+            <FontAwesomeIcon icon={faSpinner} spin size="3x" />
+          </div>
         </div>
       </div>
     );
@@ -23,31 +31,31 @@ const Listing = ({ destination }: Props) => {
   const { title, distance, duration, cost, image, overview } = destination;
 
   return (
-    <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
-      <Breadcrumbs />
-      <div className="grid grid-cols-4 grid-rows-2 items-center gap-2 sm:gap-4 lg:gap-8">
-        <img
-          className="col-span-2 row-span-2 h-full w-full rounded-tl-lg rounded-bl-lg object-cover"
-          src={image}
-        />
-        <img
-          className="col-span-1 row-span-1 h-auto w-full  object-cover"
-          src={image}
-        />
-        <img
-          className="col-span-1 row-span-1 h-auto w-full  rounded-tr-lg object-cover"
-          src={image}
-        />
-        <img
-          className="col-span-1 row-span-1 h-auto w-full  object-cover"
-          src={image}
-        />
-        <img
-          className="col-span-1 row-span-1 h-auto w-full rounded-br-lg object-cover"
-          src={image}
-        />
+    <div className="lgg:px-24  min-h-screen px-6 pb-16 lg:px-12 xl:px-52">
+      <div className="mt-8 mb-4 flex items-center justify-between">
+        <button
+          onClick={() => router.back()}
+          className="flex items-center gap-x-2 text-lg font-semibold text-gray-400 transition-colors hover:text-dark-accent"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+          <span>Back</span>
+        </button>
       </div>
-
+      <Breadcrumbs />
+      <Gallery image={image} />
       <div className="relative mt-8 flex grid-cols-2 flex-col gap-8 md:grid">
         <div className="flex flex-col gap-y-4">
           <div>
@@ -59,44 +67,7 @@ const Listing = ({ destination }: Props) => {
 
           <hr id="overview" className="rounded-full border-gray-400 " />
 
-          <div className="grid grid-cols-2 grid-rows-2 gap-2 sm:grid-cols-4 sm:grid-rows-1 lg:gap-4 xl:gap-12">
-            <button
-              onClick={() => {
-                const element = document.getElementById("overview");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg "
-            >
-              Overview
-            </button>
-            <button
-              onClick={() => {
-                const element = document.getElementById("amenities");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg"
-            >
-              Amenities
-            </button>
-            <button
-              onClick={() => {
-                const element = document.getElementById("activities");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg"
-            >
-              Activities
-            </button>
-            <button
-              onClick={() => {
-                const element = document.getElementById("safety");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg"
-            >
-              Safety
-            </button>
-          </div>
+          <ButtonGroup />
 
           <div className="text-gray-400">{overview}</div>
 
@@ -164,28 +135,9 @@ const Listing = ({ destination }: Props) => {
           </div>
 
           <hr className="my-4 rounded-full border-gray-400" />
-
-          <div className="flex flex-col gap-y-4">
-            <div>
-              <h2 className="text-3xl font-bold">More Destinations</h2>
-              <p className="mt-1 text-lg font-semibold text-gray-400">
-                Similar destinations you would love.
-              </p>
-            </div>
-
-            <div className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              quod, explicabo sequi repellendus facilis, cumque obcaecati,
-              maiores dignissimos quisquam voluptatem eveniet accusantium fuga
-              recusandae sit rem? Voluptatibus deserunt aut excepturi odio qui
-              aliquam quidem cupiditate iusto obcaecati totam. Necessitatibus
-              sint reprehenderit vel! Ipsam, deleniti quam nulla perspiciatis
-              minus perferendis libero?
-            </div>
-          </div>
         </div>
 
-        <div>
+        <div className="">
           <div className="relative flex flex-col gap-y-4 rounded-lg bg-dark-background p-7 md:top-16">
             <h2>
               <span className="text-4xl font-bold">{cost}</span>{" "}
@@ -194,8 +146,8 @@ const Listing = ({ destination }: Props) => {
               </span>
             </h2>
 
-            <div className="grid grid-cols-1 grid-rows-3 rounded-lg xsm:grid-cols-2 xsm:grid-rows-2 ">
-              <div className="col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2 xsm:rounded-tr-none">
+            <div className="xsm:grid-cols-2 xsm:grid-rows-2 grid grid-cols-1 grid-rows-3 rounded-lg ">
+              <div className="xsm:rounded-tr-none col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     DEPARTURE
@@ -210,7 +162,7 @@ const Listing = ({ destination }: Props) => {
                   />
                 </button>
               </div>
-              <div className="col-span-1 row-span-1 flex items-center justify-between border border-gray-400 px-3 py-2 xsm:rounded-tr-lg xsm:border-l-0">
+              <div className="xsm:rounded-tr-lg xsm:border-l-0 col-span-1 row-span-1 flex items-center justify-between border border-gray-400 px-3 py-2">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     RETURN
@@ -225,7 +177,7 @@ const Listing = ({ destination }: Props) => {
                   />
                 </button>
               </div>
-              <div className="col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2 xsm:col-span-2 xsm:row-span-2">
+              <div className="xsm:col-span-2 xsm:row-span-2 col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     TICKETS
@@ -244,38 +196,38 @@ const Listing = ({ destination }: Props) => {
 
             <div className="flex flex-col gap-y-6">
               <div className="mt-4 flex flex-col gap-y-2">
-                <h2 className="text-center text-2xl font-bold xsm:text-left">
+                <h2 className="xsm:text-left text-center text-2xl font-bold">
                   SELECT TRAINING PACKAGE
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400  lg:h-32 lg:w-32"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
                 </div>
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <h2 className="text-center text-2xl font-bold xsm:text-left">
+                <h2 className="xsm:text-left text-center text-2xl font-bold">
                   SELECT VEHICLE
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400  lg:h-32 lg:w-32"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
                 </div>
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <h2 className="text-center text-2xl font-bold xsm:text-left">
+                <h2 className="xsm:text-left text-center text-2xl font-bold">
                   SELECT RECOVERY STRATEGY
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400  lg:h-32 lg:w-32"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
+                  <div className="lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32"></div>
                 </div>
               </div>
             </div>
@@ -284,6 +236,118 @@ const Listing = ({ destination }: Props) => {
           </div>
         </div>
       </div>
+
+      <Recommendations />
+    </div>
+  );
+};
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+const Recommendations = () => {
+  const router = useRouter();
+  const { data, error, isLoading } = useSWR(
+    `/api/destinations/random`,
+    fetcher
+  );
+
+  return (
+    <div className="mt-8 flex flex-col gap-y-4">
+      <div className="flex flex-col items-center md:items-start">
+        <h2 className="text-3xl font-bold">More Destinations</h2>
+        <p className="mt-1 text-lg font-semibold text-gray-400">
+          Similar destinations you would love.
+        </p>
+      </div>
+
+      {isLoading ? (
+        <div className="flex h-96 items-center justify-center">
+          <FontAwesomeIcon icon={faSpinner} spin size="3x" />
+        </div>
+      ) : (
+        <div className="flex w-full flex-wrap items-center justify-center gap-4 md:justify-between">
+          {data?.map((destination: Destination, index) => (
+            <Card
+              key={index}
+              cost={destination.cost}
+              image={destination.image}
+              distance={destination.distance}
+              duration={destination.duration}
+              title={destination.title}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ButtonGroup = () => {
+  return (
+    <div className="grid grid-cols-2 grid-rows-2 gap-2 sm:grid-cols-4 sm:grid-rows-1 lg:gap-4 xl:gap-12">
+      <button
+        onClick={() => {
+          const element = document.getElementById("overview");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg "
+      >
+        Overview
+      </button>
+      <button
+        onClick={() => {
+          const element = document.getElementById("amenities");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg"
+      >
+        Amenities
+      </button>
+      <button
+        onClick={() => {
+          const element = document.getElementById("activities");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg"
+      >
+        Activities
+      </button>
+      <button
+        onClick={() => {
+          const element = document.getElementById("safety");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="flex items-center justify-center rounded bg-dark-background p-4 text-base font-semibold lg:text-lg"
+      >
+        Safety
+      </button>
+    </div>
+  );
+};
+
+const Gallery = ({ image }: { image: string }) => {
+  return (
+    <div className="grid grid-cols-4 grid-rows-2 items-center gap-2 sm:gap-4 lg:gap-8">
+      <img
+        className="col-span-2 row-span-2 h-full w-full rounded-tl-lg rounded-bl-lg object-cover"
+        src={image}
+      />
+      <img
+        className="col-span-1 row-span-1 h-auto w-full  object-cover"
+        src={image}
+      />
+      <img
+        className="col-span-1 row-span-1 h-auto w-full  rounded-tr-lg object-cover"
+        src={image}
+      />
+      <img
+        className="col-span-1 row-span-1 h-auto w-full  object-cover"
+        src={image}
+      />
+      <img
+        className="col-span-1 row-span-1 h-auto w-full rounded-br-lg object-cover"
+        src={image}
+      />
     </div>
   );
 };

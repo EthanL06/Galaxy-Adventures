@@ -1,5 +1,5 @@
 import { Listing } from "@/components/destinations";
-import { Footer, Navbar } from "@/components/global";
+import { BackgroundParticles, Footer, Navbar } from "@/components/global";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 
@@ -15,11 +15,10 @@ const Destination = (props: Props) => {
   );
 
   return (
-    <>
-      <Navbar />
+    <div className="xl:pt-4">
       <Listing destination={data} />
       <Footer />
-    </>
+    </div>
   );
 };
 export default Destination;
