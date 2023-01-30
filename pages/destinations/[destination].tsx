@@ -1,8 +1,7 @@
 import { Listing } from "@/components/destinations";
-import { BackgroundParticles, Footer, Navbar } from "@/components/global";
+import { Datepicker, Footer } from "@/components/global";
 import { useRouter } from "next/router";
 import useSWR from "swr";
-
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 type Props = {};

@@ -45,7 +45,7 @@ const Card = ({ title, distance, duration, cost, image }: Props) => {
 
         <div>
           <span className="font-semibold">{cost}</span>
-          <span className="text-gray-500"> round-trip</span>
+          <span className="text-gray-500"> per ticket</span>
         </div>
       </div>
     </div>

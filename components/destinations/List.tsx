@@ -14,14 +14,6 @@ type Props = {
 };
 
 const List = ({ destinations, isLoading }: Props) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (destinations !== undefined) {
-      setLoading(false);
-    }
-  }, [destinations]);
-
   if (isLoading) {
     return (
       <div className="min-h-screen w-full bg-dark-background p-8 ">

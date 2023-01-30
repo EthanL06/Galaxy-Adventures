@@ -19,12 +19,22 @@ export default async function handler(
   // Parse the json data file
   const destinations: Destination[] = JSON.parse(fileContents);
 
+  const { exclude } = req.query;
+
+  if (typeof exclude !== "string") {
+    res.status(400).json({ message: "Bad request" });
+    return;
+  }
+
   // Get 3 random destinations and make sure they are not the same
   const randomDestinations = [];
   while (randomDestinations.length < 3) {
     const randomDestination =
       destinations[Math.floor(Math.random() * destinations.length)];
-    if (!randomDestinations.includes(randomDestination)) {
+    if (
+      !randomDestinations.includes(randomDestination) &&
+      randomDestination.title.toLowerCase() !== exclude.toLowerCase()
+    ) {
       randomDestinations.push(randomDestination);
     }
   }

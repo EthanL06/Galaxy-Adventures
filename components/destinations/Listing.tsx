@@ -9,12 +9,43 @@ import {
 import { Button, Breadcrumbs } from "../global";
 import useSWR from "swr";
 import Card from "./Card";
+import { useEffect, useState } from "react";
+import MyModal from "./DateModal";
+import { useTodayDate } from "@/hooks/useTodayDate";
+import DateModal from "./DateModal";
+import TicketModal from "./TicketModal";
 
 type Props = {
   destination: Destination;
 };
 const Listing = ({ destination }: Props) => {
   const router = useRouter();
+  const { todayDate } = useTodayDate();
+
+  const [departureDate, setDepartureDate] = useState(todayDate);
+  const [returnDate, setReturnDate] = useState(todayDate);
+  const [ticketAmount, setTicketAmount] = useState(1);
+
+  useEffect(() => {
+    if (!destination) return;
+
+    if (departureDate === "") {
+      setDepartureDate(todayDate);
+      setReturnDate(todayDate);
+      return;
+    }
+
+    const date = new Date(departureDate);
+    date.setDate(date.getDate() + destination.durationValue + 1);
+
+    // Format the date to YYYY-MM-DD
+    const dd = String(date.getDate()).padStart(2, "0");
+    const mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = date.getFullYear();
+    const returnDate = yyyy + "-" + mm + "-" + dd;
+
+    setReturnDate(returnDate);
+  }, [todayDate, departureDate, destination]);
 
   if (!destination) {
     return (
@@ -34,7 +65,7 @@ const Listing = ({ destination }: Props) => {
     <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
       <div className="mt-8 mb-4 flex items-center justify-between">
         <button
-          onClick={() => router.back()}
+          onClick={() => router.push("/destinations")}
           className="flex items-center gap-x-2 text-lg font-semibold text-gray-400 transition-colors hover:text-dark-accent"
         >
           <svg
@@ -141,56 +172,55 @@ const Listing = ({ destination }: Props) => {
           <div className="relative flex flex-col gap-y-4 rounded-lg bg-dark-background p-7 md:top-16">
             <h2>
               <span className="text-4xl font-bold">{cost}</span>{" "}
-              <span className="text-lg font-medium text-gray-400">
-                roundtrip
+              <span className="ml-1 text-lg font-medium text-gray-400">
+                per ticket
               </span>
             </h2>
 
             <div className="grid grid-cols-1 grid-rows-3 rounded-lg xsm:grid-cols-2 xsm:grid-rows-2 ">
-              <div className="col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2 xsm:rounded-tr-none">
+              <div className="relative col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2 xsm:rounded-tr-none">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     DEPARTURE
                   </div>
-                  <div>1/26/2023</div>
+                  <div>{departureDate}</div>
                 </div>
 
-                <button className="flex items-center justify-center rounded-full transition-transform hover:bg-background">
-                  <FontAwesomeIcon
-                    icon={faCalendar}
-                    className="p-3 text-xl text-white transition-transform active:scale-90"
-                  />
-                </button>
+                <DateModal setDate={setDepartureDate}>
+                  <button className="flex items-center justify-center rounded-full transition-transform hover:bg-background">
+                    <FontAwesomeIcon
+                      icon={faCalendar}
+                      className="p-3 text-xl text-white transition-transform active:scale-90"
+                    />
+                  </button>
+                </DateModal>
               </div>
               <div className="col-span-1 row-span-1 flex items-center justify-between border border-gray-400 px-3 py-2 xsm:rounded-tr-lg xsm:border-l-0">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     RETURN
                   </div>
-                  <div>2/14/2023</div>
+                  <div>{returnDate}</div>
                 </div>
-
-                <button className="flex items-center justify-center rounded-full transition-transform hover:bg-background">
-                  <FontAwesomeIcon
-                    icon={faCalendar}
-                    className="p-3 text-xl text-white transition-transform active:scale-90"
-                  />
-                </button>
               </div>
               <div className="col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2 xsm:col-span-2 xsm:row-span-2">
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     TICKETS
                   </div>
-                  <div>1 ticket</div>
+                  <div>
+                    {ticketAmount} {ticketAmount > 1 ? "tickets" : "ticket"}
+                  </div>
                 </div>
 
-                <button className="flex items-center justify-center rounded-full transition-transform hover:bg-background">
-                  <FontAwesomeIcon
-                    icon={faEdit}
-                    className="p-3 text-xl text-white transition-transform active:scale-90"
-                  />
-                </button>
+                <TicketModal setTicketAmount={setTicketAmount}>
+                  <button className="flex items-center justify-center rounded-full transition-transform hover:bg-background">
+                    <FontAwesomeIcon
+                      icon={faEdit}
+                      className="p-3 text-xl text-white transition-transform active:scale-90"
+                    />
+                  </button>
+                </TicketModal>
               </div>
             </div>
 
@@ -201,7 +231,7 @@ const Listing = ({ destination }: Props) => {
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
+                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48 "></div>
                   <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
                   <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
                 </div>
@@ -237,18 +267,18 @@ const Listing = ({ destination }: Props) => {
         </div>
       </div>
 
-      <Recommendations />
+      <Recommendations exclude={title} />
     </div>
   );
 };
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-const Recommendations = () => {
-  const router = useRouter();
+const Recommendations = ({ exclude }: { exclude: string }) => {
   const { data, error, isLoading } = useSWR(
-    `/api/destinations/random`,
-    fetcher
+    `/api/destinations/random?exclude=${exclude}`,
+    fetcher,
+    { revalidateOnMount: true }
   );
 
   return (
