@@ -127,7 +127,7 @@ const Listing = ({ destination }: Props) => {
 
           <div className="flex flex-col gap-y-4">
             <div>
-              <h2 className="text-3xl font-bold">Activites</h2>
+              <h2 className="text-3xl font-bold">Activities</h2>
               <p className="mt-1 text-lg font-semibold text-gray-400">
                 Things to do.
               </p>

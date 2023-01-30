@@ -37,7 +37,7 @@ const Footer = (props: Props) => {
       label: "Destinations",
     },
     {
-      href: "/activites",
+      href: "/activities",
       label: "Activities",
     },
   ];
