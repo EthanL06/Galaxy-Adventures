@@ -9,7 +9,7 @@ import {
 import { Button, Breadcrumbs } from "../global";
 import useSWR from "swr";
 import Card from "./Card";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import MyModal from "./DateModal";
 import { useTodayDate } from "@/hooks/useTodayDate";
 import DateModal from "./DateModal";
@@ -25,6 +25,10 @@ const Listing = ({ destination }: Props) => {
   const [departureDate, setDepartureDate] = useState(todayDate);
   const [returnDate, setReturnDate] = useState(todayDate);
   const [ticketAmount, setTicketAmount] = useState(1);
+
+  const [trainingPackage, setTrainingPackage] = useState(0);
+  const [vehiclePackage, setVehiclePackage] = useState(0);
+  const [recoveryPackage, setRecoveryPackage] = useState(0);
 
   useEffect(() => {
     if (!destination) return;
@@ -230,13 +234,27 @@ const Listing = ({ destination }: Props) => {
                   SELECT TRAINING PACKAGE
                 </h2>
 
-                <form className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <input className="h-24 w-full rounded-lg border-2 border-dark-accent bg-background font-semibold shadow shadow-dark-accent lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 ">
-                    Basic
-                  </input>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                </form>
+                <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+                  <Package
+                    title="Basic"
+                    packageIndex={trainingPackage}
+                    setPackage={() => setTrainingPackage(0)}
+                    ind={0}
+                  />
+                  <Package
+                    title="Premium"
+                    packageIndex={trainingPackage}
+                    setPackage={() => setTrainingPackage(1)}
+                    ind={1}
+                  />
+
+                  <Package
+                    title="Deluxe"
+                    packageIndex={trainingPackage}
+                    setPackage={() => setTrainingPackage(2)}
+                    ind={2}
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col gap-y-2">
@@ -245,9 +263,24 @@ const Listing = ({ destination }: Props) => {
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <Package
+                    title="Falcon Heavy"
+                    packageIndex={vehiclePackage}
+                    setPackage={() => setVehiclePackage(0)}
+                    ind={0}
+                  />
+                  <Package
+                    title="Space Launch System"
+                    packageIndex={vehiclePackage}
+                    setPackage={() => setVehiclePackage(1)}
+                    ind={1}
+                  />
+                  <Package
+                    title="Starship"
+                    packageIndex={vehiclePackage}
+                    setPackage={() => setVehiclePackage(2)}
+                    ind={2}
+                  />
                 </div>
               </div>
 
@@ -257,9 +290,24 @@ const Listing = ({ destination }: Props) => {
                 </h2>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
+                  <Package
+                    title="Parachute"
+                    packageIndex={recoveryPackage}
+                    setPackage={() => setRecoveryPackage(0)}
+                    ind={0}
+                  />
+                  <Package
+                    title="Vertical Landing on Land"
+                    packageIndex={recoveryPackage}
+                    setPackage={() => setRecoveryPackage(1)}
+                    ind={1}
+                  />
+                  <Package
+                    title="Vertical Landing on Water"
+                    packageIndex={recoveryPackage}
+                    setPackage={() => setRecoveryPackage(2)}
+                    ind={2}
+                  />
                 </div>
               </div>
             </div>
@@ -275,6 +323,31 @@ const Listing = ({ destination }: Props) => {
 };
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+const Package = ({
+  title,
+  packageIndex,
+  setPackage,
+  ind,
+}: {
+  title: string;
+  packageIndex: number;
+  setPackage: () => void;
+  ind: number;
+}) => {
+  return (
+    <button
+      onClick={setPackage}
+      className={`${
+        packageIndex == ind
+          ? "border-2 border-dark-accent shadow-dark-accent"
+          : "border-0 shadow-none"
+      } h-24 w-full rounded-lg  bg-background p-4 font-semibold shadow transition-colors lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48`}
+    >
+      <label>{title}</label>
+    </button>
+  );
+};
 
 const Recommendations = ({ exclude }: { exclude: string }) => {
   const { data, error, isLoading } = useSWR(
