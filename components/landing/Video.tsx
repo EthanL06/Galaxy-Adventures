@@ -32,8 +32,8 @@ const Video = (props: Props) => {
         className="flex w-full items-center justify-center px-4"
       >
         <iframe
-          className="mt-16 aspect-video w-full rounded-lg lg:w-[60rem]"
-          src="https://www.youtube.com/embed/P0AAnAvX64g"
+          className="mt-16 aspect-video w-full rounded-lg border-4 border-dark-background lg:w-[60rem]"
+          src="https://www.youtube.com/embed/P0AAnAvX64g?cc_load_policy=1"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen={true}

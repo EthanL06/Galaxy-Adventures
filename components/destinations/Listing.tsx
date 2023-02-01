@@ -66,7 +66,7 @@ const Listing = ({ destination }: Props) => {
       <div className="mt-8 mb-4 flex items-center justify-between">
         <button
           onClick={() => router.push("/destinations")}
-          className="flex items-center gap-x-2 text-lg font-semibold text-gray-400 transition-colors hover:text-dark-accent"
+          className="flex items-center gap-x-2 text-lg font-semibold text-gray-400 transition-colors hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -230,11 +230,13 @@ const Listing = ({ destination }: Props) => {
                   SELECT TRAINING PACKAGE
                 </h2>
 
-                <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
-                  <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40  xxl:h-48 xxl:w-48 "></div>
+                <form className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+                  <input className="h-24 w-full rounded-lg border-2 border-dark-accent bg-background font-semibold shadow shadow-dark-accent lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48 ">
+                    Basic
+                  </input>
                   <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
                   <div className="h-24 w-full rounded-lg bg-gray-400 lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48"></div>
-                </div>
+                </form>
               </div>
 
               <div className="flex flex-col gap-y-2">

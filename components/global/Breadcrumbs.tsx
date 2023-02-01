@@ -34,7 +34,9 @@ const Breadcrumbs = (props: Props) => {
         return (
           <div className="flex gap-x-2 font-medium" key={index}>
             <Link href={path.href} legacyBehavior>
-              <a className="text-gray-400">{path.breadcrumb}</a>
+              <a className="text-gray-400 transition-colors hover:text-white">
+                {path.breadcrumb}
+              </a>
             </Link>
 
             {index !== pathArray.length - 1 && (
