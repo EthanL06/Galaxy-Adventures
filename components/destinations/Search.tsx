@@ -19,13 +19,6 @@ const Search = ({ search, setSearch }: Props) => {
           placeholder="Search for a destination"
           className="w-full bg-background px-4 text-gray-300 focus:outline-none sm:w-[30rem]"
         />
-
-        <button className="flex items-center justify-center rounded-full transition-transform hover:bg-dark-background">
-          <FontAwesomeIcon
-            icon={faFilter}
-            className="p-2 text-xl text-white transition-transform active:scale-90"
-          />
-        </button>
       </div>
     </div>
   );
