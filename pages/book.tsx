@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import { Navbar, Footer } from "@/components/global";
+import { Navbar, Footer, Button } from "@/components/global";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import useSWR from "swr";
+import { Destination } from "@/types/destination";
+import { format } from "path";
 type Props = {};
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -26,7 +28,7 @@ const Book = (props: Props) => {
     }
   );
 
-  const { data } = useSWR(
+  const { data }: { data: Destination } = useSWR(
     bookingData.destination
       ? `/api/destinations?destination=${bookingData.destination}`
       : null,
@@ -111,6 +113,15 @@ const Book = (props: Props) => {
     }
   };
 
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+
+    // These options are needed to round to whole numbers if that's what you want.
+    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+  });
+
   return (
     <>
       <Navbar showLinks={false} />
@@ -119,7 +130,7 @@ const Book = (props: Props) => {
           <FontAwesomeIcon icon={faSpinner} spin size="3x" />
         </div>
       ) : (
-        <div className="py-8 px-24 lg:px-48">
+        <div className="py-8 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-48">
           <div className="mb-4 flex items-center gap-x-3">
             <button
               onClick={() => router.back()}
@@ -140,12 +151,12 @@ const Book = (props: Props) => {
                 />
               </svg>
             </button>
-            <div className="text-3xl font-bold">
+            <div className="text-2xl font-bold sm:text-3xl">
               Confirm Booking and Payment
             </div>
           </div>
 
-          <div className="grid min-h-screen w-full grid-cols-2 grid-rows-1 gap-y-12 gap-x-8 ">
+          <div className="relative mt-8 flex grid-cols-2 flex-col gap-8 md:grid">
             <div className="row-span-1 flex flex-col gap-y-6">
               <div>
                 <div className="rounded-lg bg-dark-background p-7">
@@ -269,7 +280,7 @@ const Book = (props: Props) => {
               </div>
             </div>
             <div className="relative row-span-1">
-              <div className="sticky top-12 rounded-lg bg-dark-background p-7">
+              <div className="sticky top-12 flex flex-col gap-y-6 rounded-lg bg-dark-background p-7">
                 <div className="flex gap-x-3">
                   <img
                     src={data?.image}
@@ -283,7 +294,94 @@ const Book = (props: Props) => {
                     <div className="text-3xl">{bookingData.destination}</div>
                   </div>
                 </div>
-                <hr className="my-4 rounded-full border-gray-400" />
+
+                <hr className="rounded-full border-gray-400" />
+
+                <div className="flex flex-col gap-y-3">
+                  <div className="mb-2 text-2xl font-semibold">
+                    Payment Details
+                  </div>
+
+                  <div className="flex justify-between text-gray-300">
+                    <div>
+                      {bookingData.cost} x {bookingData.tickets}{" "}
+                      {Number(bookingData.tickets) > 1 ? "tickets" : "ticket"}
+                    </div>
+                    <div>
+                      {data &&
+                        data.costValue &&
+                        formatter.format(
+                          data.costValue * Number(bookingData.tickets)
+                        )}
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between text-gray-300">
+                    <div>
+                      {renderPackage(
+                        "Training",
+                        Number(bookingData.trainingPackage)
+                      )}{" "}
+                      Training Package
+                    </div>
+                    <div>
+                      {data &&
+                        data.costValue &&
+                        formatter.format(
+                          data.costValue * Number(bookingData.tickets)
+                        )}
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between text-gray-300">
+                    <div>
+                      {renderPackage(
+                        "Vehicle",
+                        Number(bookingData.vehiclePackage)
+                      )}{" "}
+                      Vehicle Package
+                    </div>
+                    <div>
+                      {data &&
+                        data.costValue &&
+                        formatter.format(
+                          data.costValue * Number(bookingData.tickets)
+                        )}
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between text-gray-300">
+                    <div>
+                      {renderPackage(
+                        "Recovery",
+                        Number(bookingData.recoveryPackage)
+                      )}{" "}
+                      Recovery Package
+                    </div>
+                    <div>
+                      {data &&
+                        data.costValue &&
+                        formatter.format(
+                          data.costValue * Number(bookingData.tickets)
+                        )}
+                    </div>
+                  </div>
+                </div>
+
+                <hr className="rounded-full border-gray-400" />
+
+                <div className="flex justify-between font-bold text-white">
+                  <div>Total</div>
+                  <div>
+                    {data &&
+                      data.costValue &&
+                      formatter.format(
+                        data.costValue * Number(bookingData.tickets)
+                      )}
+                  </div>
+                </div>
+
+                <Button className="w-full" text="Book Now" />
               </div>
             </div>
           </div>

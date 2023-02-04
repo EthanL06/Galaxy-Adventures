@@ -304,7 +304,7 @@ const Listing = ({ destination }: Props) => {
                     ind={1}
                   />
                   <Package
-                    title="Aerial Recovery"
+                    title="Aerial Re"
                     packageIndex={recoveryPackage}
                     setPackage={() => setRecoveryPackage(2)}
                     ind={2}
