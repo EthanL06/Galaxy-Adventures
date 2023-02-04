@@ -1,7 +1,9 @@
 type Props = {};
 import { Navbar, Footer, Breadcrumbs } from "@/components/global";
+import { useRouter } from "next/router";
 
 const Training = (props: Props) => {
+  const router = useRouter();
   return (
     <>
       <Navbar />
@@ -22,15 +24,12 @@ const Training = (props: Props) => {
             training regimen, travelers can feel confident and ready for their
             once-in-a-lifetime adventure.
           </p>
-
           <hr />
-
           <h2>Basic Training ($50,000)</h2>
           <p>
             The Basic Training Package is designed for those who are looking for
             a basic understanding of space travel. This package will include:
           </p>
-
           <ul>
             <li>
               <strong>Simulations on emergency procedures</strong> - Our
@@ -54,14 +53,11 @@ const Training = (props: Props) => {
               navigation, communication, and life support systems.
             </li>
           </ul>
-
           <p>
             This package is ideal for travelers who have limited time and are
             looking for a general introduction to space travel.
           </p>
-
           <hr />
-
           <h2>Premium Training ($100,000)</h2>
           <p>
             The Premium Training Package offers a more comprehensive training
@@ -69,7 +65,6 @@ const Training = (props: Props) => {
             flight. In addition to the Basic package, this package also
             includes:
           </p>
-
           <ul>
             <li>
               <strong>More Advanced Simulations</strong> - Travelers will
@@ -101,15 +96,12 @@ const Training = (props: Props) => {
               flight.
             </li>
           </ul>
-
           <p>
             Travelers who choose the Premium Training Package will receive
             personalized attention from our trainers to ensure they are fully
             prepared for their mission.
           </p>
-
           <hr />
-
           <h2>Deluxe Training ($150,000)</h2>
           <p>
             The Deluxe Training Package is our most comprehensive training
@@ -117,7 +109,6 @@ const Training = (props: Props) => {
             This package includes everything offered in the Basic and Premium
             packages, as well as:
           </p>
-
           <ul>
             <li>
               <strong>Mission Simulation</strong> - Travelers will participate
@@ -149,12 +140,34 @@ const Training = (props: Props) => {
               life-support systems.
             </li>
           </ul>
-
           <p>
             This package is ideal for travelers who want to be fully prepared
             for their space flight and have a true understanding of what it
             takes to succeed in space.
           </p>
+
+          <button
+            onClick={() => {
+              router.back();
+            }}
+            className="flex items-center gap-x-2 text-gray-400 transition-colors hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <div>Back</div>
+          </button>
         </article>
       </div>
       <Footer />

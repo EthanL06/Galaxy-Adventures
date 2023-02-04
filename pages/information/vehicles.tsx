@@ -1,7 +1,9 @@
 type Props = {};
 import { Navbar, Footer, Breadcrumbs } from "@/components/global";
+import { useRouter } from "next/router";
 
 const Vehicles = (props: Props) => {
+  const router = useRouter();
   return (
     <>
       <Navbar />
@@ -25,9 +27,7 @@ const Vehicles = (props: Props) => {
             you&apos;re an experienced astronaut or a first-time space traveler,
             our vehicles are the perfect choice for your journey to space.
           </p>
-
           <hr />
-
           <h2>Falcon Heavy ($1,000,000)</h2>
           <p>
             Travelers riding on the Falcon Heavy can expect a powerful and
@@ -37,7 +37,6 @@ const Vehicles = (props: Props) => {
             that travelers can enjoy during their ride on the Falcon Heavy
             include:
           </p>
-
           <ul>
             <li>
               <strong>Spectacular Views</strong> - The Falcon Heavy&apos;s
@@ -58,9 +57,7 @@ const Vehicles = (props: Props) => {
               travelers with a safe and comfortable ride to space.
             </li>
           </ul>
-
           <hr />
-
           <h2>Space Launch System ($5,000,000)</h2>
           <p>
             The Space Launch System (SLS) provides travelers with a safe and
@@ -70,7 +67,6 @@ const Vehicles = (props: Props) => {
             unique features that travelers can enjoy during their ride on the
             SLS include:
           </p>
-
           <ul>
             <li>
               <strong>Safe and Reliable Launch</strong> - The SLS has been
@@ -91,9 +87,7 @@ const Vehicles = (props: Props) => {
               comfortable and convenient space launch experience.
             </li>
           </ul>
-
           <hr />
-
           <h2>Starship ($10,000,000)</h2>
           <p>
             Travelers riding on Starship can expect a revolutionary space launch
@@ -102,7 +96,6 @@ const Vehicles = (props: Props) => {
             and equipment to space. Some unique features that travelers can
             enjoy during their ride on Starship include:
           </p>
-
           <ul>
             <li>
               <strong>Versatile Capabilities</strong> - Starship is capable of
@@ -125,6 +118,29 @@ const Vehicles = (props: Props) => {
               systems.
             </li>
           </ul>
+
+          <button
+            onClick={() => {
+              router.back();
+            }}
+            className="flex items-center gap-x-2 text-gray-400 transition-colors hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <div>Back</div>
+          </button>
         </article>
       </div>
       <Footer />

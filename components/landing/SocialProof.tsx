@@ -10,7 +10,7 @@ const SocialProof = (props: Props) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold text-white"
+        className="px-4 text-4xl font-bold text-white sm:text-4xl"
       >
         Trusted by the <span className="text-dark-accent">Best</span>.
       </motion.div>

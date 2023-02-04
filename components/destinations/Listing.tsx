@@ -230,9 +230,9 @@ const Listing = ({ destination }: Props) => {
 
             <div className="flex flex-col gap-y-6">
               <div className="mt-4 flex flex-col gap-y-2">
-                <div className="flex items-center gap-x-2">
+                <div className="flex flex-wrap items-center gap-x-2">
                   <h2 className="text-center text-2xl font-bold xsm:text-left">
-                    SELECT TRAINING PACKAGE
+                    SELECT TRAINING
                   </h2>
 
                   <Link
@@ -267,7 +267,7 @@ const Listing = ({ destination }: Props) => {
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <div className="flex items-center gap-x-2">
+                <div className="flex flex-wrap items-center gap-x-2">
                   <h2 className="text-center text-2xl font-bold xsm:text-left">
                     SELECT VEHICLE
                   </h2>
@@ -303,9 +303,9 @@ const Listing = ({ destination }: Props) => {
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <div className="flex items-center gap-x-2">
+                <div className="flex flex-wrap items-center gap-x-2">
                   <h2 className="text-center text-2xl font-bold xsm:text-left">
-                    SELECT RECOVERY STRATEGY
+                    SELECT RECOVERY
                   </h2>
 
                   <Link

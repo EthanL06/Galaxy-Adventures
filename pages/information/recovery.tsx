@@ -1,7 +1,10 @@
 type Props = {};
-import { Navbar, Footer, Breadcrumbs } from "@/components/global";
+import { Navbar, Footer, Breadcrumbs, Button } from "@/components/global";
+import { useRouter } from "next/router";
 
 const Recovery = (props: Props) => {
+  const router = useRouter();
+
   return (
     <>
       <Navbar />
@@ -111,6 +114,29 @@ const Recovery = (props: Props) => {
               </strong>
             </li>
           </ul>
+
+          <button
+            onClick={() => {
+              router.back();
+            }}
+            className="flex items-center gap-x-2 text-gray-400 transition-colors hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <div>Back</div>
+          </button>
         </article>
       </div>
       <Footer />
