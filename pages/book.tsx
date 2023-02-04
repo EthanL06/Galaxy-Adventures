@@ -398,7 +398,7 @@ const Book = (props: Props) => {
 
                 <div className="flex justify-between font-bold text-white">
                   <div>Total</div>
-                  <div>
+                  <div className="underline">
                     {formatter.format(
                       Number(
                         costValue * Number(bookingData.tickets) +
@@ -425,7 +425,13 @@ const Book = (props: Props) => {
                   </div>
                 </div>
 
-                <Button className="w-full" text="Book Now" />
+                <Button
+                  className="w-full"
+                  text="Purchase"
+                  onClick={() => {
+                    router.push("/confirm");
+                  }}
+                />
               </div>
             </div>
           </div>
