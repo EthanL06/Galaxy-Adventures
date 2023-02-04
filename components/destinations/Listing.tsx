@@ -10,7 +10,6 @@ import { Button, Breadcrumbs } from "../global";
 import useSWR from "swr";
 import Card from "./Card";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import MyModal from "./DateModal";
 import { useTodayDate } from "@/hooks/useTodayDate";
 import DateModal from "./DateModal";
 import TicketModal from "./TicketModal";
@@ -304,7 +303,7 @@ const Listing = ({ destination }: Props) => {
                     ind={1}
                   />
                   <Package
-                    title="Aerial Re"
+                    title="Aerial Recovery"
                     packageIndex={recoveryPackage}
                     setPackage={() => setRecoveryPackage(2)}
                     ind={2}
@@ -312,12 +311,6 @@ const Listing = ({ destination }: Props) => {
                 </div>
               </div>
             </div>
-
-            {/* <Link
-              href={`/book?destination=${title}&departureDate=${departureDate}&returnDate=${returnDate}&cost=${cost}&tickets=${ticketAmount}&trainingPackage=${trainingPackage}&vehiclePackage=${vehiclePackage}&recoveryPackage=${recoveryPackage}`}
-            >
-              <Button text="Book Now" className="mt-4" />
-            </Link> */}
 
             <Button
               text="Book Now"

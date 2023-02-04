@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import useSWR from "swr";
 import { Destination } from "@/types/destination";
-import { format } from "path";
+
 type Props = {};
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -15,6 +15,7 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const Book = (props: Props) => {
   // Get url params
   const router = useRouter();
+  const [costValue, setCostValue] = useState(0);
   const [bookingData, setBookingData] = useState(
     {} as {
       destination: string;
@@ -64,7 +65,7 @@ const Book = (props: Props) => {
   }, []);
 
   useEffect(() => {
-    console.log(data);
+    setCostValue(data?.costValue);
   }, [data]);
 
   const renderPackage = (packageType: string, number: number) => {
@@ -72,11 +73,12 @@ const Book = (props: Props) => {
       case "Training": {
         switch (number) {
           case 0:
-            return "Basic";
+            return ["Basic", 50000];
           case 1:
-            return "Premium";
+            return ["Premium", 100000];
           case 2:
-            return "Deluxe";
+            return ["Deluxe", 150000];
+
           default:
             return "Invalid Package Type";
         }
@@ -85,11 +87,14 @@ const Book = (props: Props) => {
       case "Vehicle": {
         switch (number) {
           case 0:
-            return "Falcon Heavy";
+            return ["Falcon Heavy", 1000000];
+
           case 1:
-            return "Space Launch System";
+            return ["Space Launch System", 5000000];
+
           case 2:
-            return "Starship";
+            return ["Starship", 10000000];
+
           default:
             return "Invalid Package Type";
         }
@@ -98,11 +103,11 @@ const Book = (props: Props) => {
       case "Recovery": {
         switch (number) {
           case 0:
-            return "Parachute";
+            return ["Parachute", 30000];
           case 1:
-            return "Vertical Landing";
+            return ["Vertical Landing", 100000];
           case 2:
-            return "Aerial Recovery";
+            return ["Aerial Recovery", 200000];
           default:
             return "Invalid Package Type";
         }
@@ -219,10 +224,12 @@ const Book = (props: Props) => {
                         <div>
                           <div className="text-sm font-semibold">TRAINING</div>
                           <div className="text-gray-300">
-                            {renderPackage(
-                              "Training",
-                              Number(bookingData.trainingPackage)
-                            )}
+                            {
+                              renderPackage(
+                                "Training",
+                                Number(bookingData.trainingPackage)
+                              )[0]
+                            }
                           </div>
                         </div>
                         <div>
@@ -239,10 +246,12 @@ const Book = (props: Props) => {
                         <div>
                           <div className="text-sm font-semibold">VEHICLE</div>
                           <div className="text-gray-300">
-                            {renderPackage(
-                              "Vehicle",
-                              Number(bookingData.vehiclePackage)
-                            )}
+                            {
+                              renderPackage(
+                                "Vehicle",
+                                Number(bookingData.vehiclePackage)
+                              )[0]
+                            }
                           </div>
                         </div>
                         <div>
@@ -259,10 +268,12 @@ const Book = (props: Props) => {
                         <div>
                           <div className="text-sm font-semibold">RECOVERY</div>
                           <div className="text-gray-300">
-                            {renderPackage(
-                              "Recovery",
-                              Number(bookingData.recoveryPackage)
-                            )}
+                            {
+                              renderPackage(
+                                "Recovery",
+                                Number(bookingData.recoveryPackage)
+                              )[0]
+                            }
                           </div>
                         </div>
                         <div>
@@ -302,68 +313,77 @@ const Book = (props: Props) => {
                     Payment Details
                   </div>
 
-                  <div className="flex justify-between text-gray-300">
+                  <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-gray-300">
                     <div>
                       {bookingData.cost} x {bookingData.tickets}{" "}
                       {Number(bookingData.tickets) > 1 ? "tickets" : "ticket"}
                     </div>
                     <div>
                       {data &&
-                        data.costValue &&
+                        costValue &&
                         formatter.format(
-                          data.costValue * Number(bookingData.tickets)
+                          costValue * Number(bookingData.tickets)
                         )}
                     </div>
                   </div>
 
-                  <div className="flex justify-between text-gray-300">
+                  <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-gray-300">
                     <div>
-                      {renderPackage(
-                        "Training",
-                        Number(bookingData.trainingPackage)
-                      )}{" "}
+                      {
+                        renderPackage(
+                          "Training",
+                          Number(bookingData.trainingPackage)
+                        )[0]
+                      }{" "}
                       Training Package
                     </div>
                     <div>
-                      {data &&
-                        data.costValue &&
-                        formatter.format(
-                          data.costValue * Number(bookingData.tickets)
-                        )}
+                      {formatter.format(
+                        renderPackage(
+                          "Training",
+                          Number(bookingData.trainingPackage)
+                        )[1]
+                      )}
                     </div>
                   </div>
 
-                  <div className="flex justify-between text-gray-300">
+                  <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-gray-300">
                     <div>
-                      {renderPackage(
-                        "Vehicle",
-                        Number(bookingData.vehiclePackage)
-                      )}{" "}
+                      {
+                        renderPackage(
+                          "Vehicle",
+                          Number(bookingData.vehiclePackage)
+                        )[0]
+                      }{" "}
                       Vehicle Package
                     </div>
                     <div>
-                      {data &&
-                        data.costValue &&
-                        formatter.format(
-                          data.costValue * Number(bookingData.tickets)
-                        )}
+                      {formatter.format(
+                        renderPackage(
+                          "Vehicle",
+                          Number(bookingData.vehiclePackage)
+                        )[1]
+                      )}
                     </div>
                   </div>
 
                   <div className="flex justify-between text-gray-300">
                     <div>
-                      {renderPackage(
-                        "Recovery",
-                        Number(bookingData.recoveryPackage)
-                      )}{" "}
+                      {
+                        renderPackage(
+                          "Recovery",
+                          Number(bookingData.recoveryPackage)
+                        )[0]
+                      }{" "}
                       Recovery Package
                     </div>
                     <div>
-                      {data &&
-                        data.costValue &&
-                        formatter.format(
-                          data.costValue * Number(bookingData.tickets)
-                        )}
+                      {formatter.format(
+                        renderPackage(
+                          "Recovery",
+                          Number(bookingData.recoveryPackage)
+                        )[1]
+                      )}
                     </div>
                   </div>
                 </div>
@@ -373,11 +393,21 @@ const Book = (props: Props) => {
                 <div className="flex justify-between font-bold text-white">
                   <div>Total</div>
                   <div>
-                    {data &&
-                      data.costValue &&
-                      formatter.format(
-                        data.costValue * Number(bookingData.tickets)
-                      )}
+                    {formatter.format(
+                      costValue * Number(bookingData.tickets) +
+                        renderPackage(
+                          "Training",
+                          Number(bookingData.trainingPackage)
+                        )[1] +
+                        renderPackage(
+                          "Vehicle",
+                          Number(bookingData.vehiclePackage)
+                        )[1] +
+                        renderPackage(
+                          "Recovery",
+                          Number(bookingData.recoveryPackage)
+                        )[1]
+                    )}
                   </div>
                 </div>
 
