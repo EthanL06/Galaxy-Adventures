@@ -230,9 +230,18 @@ const Listing = ({ destination }: Props) => {
 
             <div className="flex flex-col gap-y-6">
               <div className="mt-4 flex flex-col gap-y-2">
-                <h2 className="text-center text-2xl font-bold xsm:text-left">
-                  SELECT TRAINING PACKAGE
-                </h2>
+                <div className="flex items-center gap-x-2">
+                  <h2 className="text-center text-2xl font-bold xsm:text-left">
+                    SELECT TRAINING PACKAGE
+                  </h2>
+
+                  <Link
+                    href={"/information/training"}
+                    className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
+                  >
+                    Learn more
+                  </Link>
+                </div>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
                   <Package
@@ -258,9 +267,18 @@ const Listing = ({ destination }: Props) => {
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <h2 className="text-center text-2xl font-bold xsm:text-left">
-                  SELECT VEHICLE
-                </h2>
+                <div className="flex items-center gap-x-2">
+                  <h2 className="text-center text-2xl font-bold xsm:text-left">
+                    SELECT VEHICLE
+                  </h2>
+
+                  <Link
+                    href={"/information/vehicles"}
+                    className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
+                  >
+                    Learn more
+                  </Link>
+                </div>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
                   <Package
@@ -285,9 +303,18 @@ const Listing = ({ destination }: Props) => {
               </div>
 
               <div className="flex flex-col gap-y-2">
-                <h2 className="text-center text-2xl font-bold xsm:text-left">
-                  SELECT RECOVERY STRATEGY
-                </h2>
+                <div className="flex items-center gap-x-2">
+                  <h2 className="text-center text-2xl font-bold xsm:text-left">
+                    SELECT RECOVERY STRATEGY
+                  </h2>
+
+                  <Link
+                    href={"/information/recovery"}
+                    className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
+                  >
+                    Learn more
+                  </Link>
+                </div>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
                   <Package

@@ -32,7 +32,10 @@ const Breadcrumbs = (props: Props) => {
     <div className="mb-4 flex gap-x-2">
       {pathArray.map((path, index) => {
         return (
-          <div className="flex gap-x-2 font-medium" key={index}>
+          <div
+            className="flex gap-x-2 font-medium prose-a:no-underline "
+            key={index}
+          >
             <Link href={path.href} legacyBehavior>
               <a className="text-gray-400 transition-colors hover:text-white">
                 {path.breadcrumb}

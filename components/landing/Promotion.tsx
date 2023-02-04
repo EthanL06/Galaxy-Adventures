@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "../global";
+import { useRouter } from "next/router";
 type Props = {};
 
 const Promotion = (props: Props) => {
+  const router = useRouter();
   return (
     <div className="grid w-full gap-x-12 bg-dark-accent/10 lg:grid-cols-2 lg:grid-rows-1 ">
       <div className="items-between flex flex-col gap-y-4 p-8 sm:p-16 md:p-24">
@@ -100,7 +102,13 @@ const Promotion = (props: Props) => {
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <Button className="mt-8 w-full lg:w-36" text="Learn More" />
+          <Button
+            className="mt-8 w-full lg:w-36"
+            text="Learn More"
+            onClick={() => {
+              router.push("/information");
+            }}
+          />
         </motion.div>
       </div>
 
