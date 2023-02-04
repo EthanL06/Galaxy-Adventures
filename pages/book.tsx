@@ -339,10 +339,12 @@ const Book = (props: Props) => {
                     </div>
                     <div>
                       {formatter.format(
-                        renderPackage(
-                          "Training",
-                          Number(bookingData.trainingPackage)
-                        )[1]
+                        Number(
+                          renderPackage(
+                            "Training",
+                            Number(bookingData.trainingPackage)
+                          )[1]
+                        )
                       )}
                     </div>
                   </div>
@@ -359,10 +361,12 @@ const Book = (props: Props) => {
                     </div>
                     <div>
                       {formatter.format(
-                        renderPackage(
-                          "Vehicle",
-                          Number(bookingData.vehiclePackage)
-                        )[1]
+                        Number(
+                          renderPackage(
+                            "Vehicle",
+                            Number(bookingData.vehiclePackage)
+                          )[1]
+                        )
                       )}
                     </div>
                   </div>
@@ -379,10 +383,12 @@ const Book = (props: Props) => {
                     </div>
                     <div>
                       {formatter.format(
-                        renderPackage(
-                          "Recovery",
-                          Number(bookingData.recoveryPackage)
-                        )[1]
+                        Number(
+                          renderPackage(
+                            "Recovery",
+                            Number(bookingData.recoveryPackage)
+                          )[1]
+                        )
                       )}
                     </div>
                   </div>
@@ -394,19 +400,27 @@ const Book = (props: Props) => {
                   <div>Total</div>
                   <div>
                     {formatter.format(
-                      costValue * Number(bookingData.tickets) +
-                        renderPackage(
-                          "Training",
-                          Number(bookingData.trainingPackage)
-                        )[1] +
-                        renderPackage(
-                          "Vehicle",
-                          Number(bookingData.vehiclePackage)
-                        )[1] +
-                        renderPackage(
-                          "Recovery",
-                          Number(bookingData.recoveryPackage)
-                        )[1]
+                      Number(
+                        costValue * Number(bookingData.tickets) +
+                          Number(
+                            renderPackage(
+                              "Training",
+                              Number(bookingData.trainingPackage)
+                            )[1]
+                          ) +
+                          Number(
+                            renderPackage(
+                              "Vehicle",
+                              Number(bookingData.vehiclePackage)
+                            )[1]
+                          ) +
+                          Number(
+                            renderPackage(
+                              "Recovery",
+                              Number(bookingData.recoveryPackage)
+                            )[1]
+                          )
+                      )
                     )}
                   </div>
                 </div>
