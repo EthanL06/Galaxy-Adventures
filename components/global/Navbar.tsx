@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({ showLinks = true }: { showLinks?: boolean }) => {
   const links = [
     {
       href: "/",
@@ -21,15 +21,17 @@ const Navbar = () => {
         </a>
       </Link>
 
-      <ul className="flex gap-x-4">
-        {links.map((link) => (
-          <li key={link.href}>
-            <Link href={link.href} passHref legacyBehavior>
-              <a className="text-lg font-bold text-white">{link.label}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {showLinks && (
+        <ul className="flex gap-x-4">
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href} passHref legacyBehavior>
+                <a className="text-lg font-bold text-white">{link.label}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };

@@ -14,6 +14,7 @@ import MyModal from "./DateModal";
 import { useTodayDate } from "@/hooks/useTodayDate";
 import DateModal from "./DateModal";
 import TicketModal from "./TicketModal";
+import Link from "next/link";
 
 type Props = {
   destination: Destination;
@@ -297,13 +298,13 @@ const Listing = ({ destination }: Props) => {
                     ind={0}
                   />
                   <Package
-                    title="Vertical Landing on Land"
+                    title="Vertical Landing"
                     packageIndex={recoveryPackage}
                     setPackage={() => setRecoveryPackage(1)}
                     ind={1}
                   />
                   <Package
-                    title="Vertical Landing on Water"
+                    title="Aerial Recovery"
                     packageIndex={recoveryPackage}
                     setPackage={() => setRecoveryPackage(2)}
                     ind={2}
@@ -312,7 +313,28 @@ const Listing = ({ destination }: Props) => {
               </div>
             </div>
 
-            <Button text="Book Now" className="mt-4" />
+            {/* <Link
+              href={`/book?destination=${title}&departureDate=${departureDate}&returnDate=${returnDate}&cost=${cost}&tickets=${ticketAmount}&trainingPackage=${trainingPackage}&vehiclePackage=${vehiclePackage}&recoveryPackage=${recoveryPackage}`}
+            >
+              <Button text="Book Now" className="mt-4" />
+            </Link> */}
+
+            <Button
+              text="Book Now"
+              className="mt-4"
+              onClick={() => {
+                sessionStorage.setItem("destination", title);
+                sessionStorage.setItem("departureDate", departureDate);
+                sessionStorage.setItem("returnDate", returnDate);
+                sessionStorage.setItem("cost", cost);
+                sessionStorage.setItem("tickets", "" + ticketAmount);
+                sessionStorage.setItem("trainingPackage", "" + trainingPackage);
+                sessionStorage.setItem("vehiclePackage", "" + vehiclePackage);
+                sessionStorage.setItem("recoveryPackage", "" + recoveryPackage);
+
+                router.push("/book");
+              }}
+            />
           </div>
         </div>
       </div>
@@ -340,9 +362,9 @@ const Package = ({
       onClick={setPackage}
       className={`${
         packageIndex == ind
-          ? "border-2 border-dark-accent shadow-dark-accent"
-          : "border-0 shadow-none"
-      } h-24 w-full rounded-lg  bg-background p-4 font-semibold shadow transition-colors lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48`}
+          ? "shadow shadow-dark-accent outline outline-2 outline-dark-accent"
+          : "shadow-none outline-0"
+      } h-24 w-full rounded-lg  bg-background p-4 font-semibold transition-colors lg:h-32 lg:w-32 lggg:h-40 lggg:w-40 xxl:h-48 xxl:w-48`}
     >
       <label>{title}</label>
     </button>
