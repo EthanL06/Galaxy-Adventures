@@ -5,7 +5,7 @@ const Hero = (props: Props) => {
   const router = useRouter();
 
   return (
-    <div className="relative flex min-h-[calc(100vh-161px)] flex-col items-center justify-between p-4">
+    <div className="relative flex min-h-[calc(100vh-72px)] flex-col items-center justify-between p-4">
       <div></div>
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-y-4 text-center">

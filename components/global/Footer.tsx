@@ -47,7 +47,7 @@ const Footer = (props: Props) => {
               <div className="flex grow basis-0 items-center justify-center lg:justify-start">
                 <div className="mr-2 text-6xl text-white">
                   <Image
-                    src="/logo.svg"
+                    src="/galaxy-logo.svg"
                     width={80}
                     height={80}
                     alt="logo"
@@ -62,10 +62,8 @@ const Footer = (props: Props) => {
                 For an unforgettable, once-in-a-lifetime experience, start
                 planning your next space adventure with us
                 <Link
-                  href="/"
-                  target="_blank"
+                  href="/destinations"
                   className="ml-1.5 text-gray-100 hover:text-gray-300"
-                  aria-label="DarkAdmin"
                 >
                   today.
                 </Link>

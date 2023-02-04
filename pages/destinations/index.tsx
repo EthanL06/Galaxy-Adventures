@@ -39,7 +39,7 @@ const Destinations = () => {
   return (
     <div className="flex flex-col">
       <Navbar />
-      <div className="flex flex-col items-center gap-y-8">
+      <div className="flex flex-col items-center gap-y-8 pt-8">
         <div className="text-3xl font-bold xsm:text-4xl">
           Search <span className="text-dark-accent">Destinations</span>
         </div>
