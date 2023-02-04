@@ -20,8 +20,8 @@ const Information = (props: Props) => {
             seamless and enjoyable. We offer a range of packages and options to
             accommodate different needs and preferences, so that every traveler
             can have a customized and memorable experience. We believe that
-            space travel is a unique opportunity to expand one's horizons, both
-            literally and figuratively, and we are honored to be a part of
+            space travel is a unique opportunity to expand one&apos;s horizons,
+            both literally and figuratively, and we are honored to be a part of
             making that dream a reality for our customers.
           </p>
 
