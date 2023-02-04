@@ -94,7 +94,7 @@ const Navbar = ({ showLinks = true }: { showLinks?: boolean }) => {
       </nav>
 
       <nav
-        className={`} sticky top-0 z-50 flex flex-col items-center justify-between bg-dark-background px-8 py-4 transition-transform duration-700 
+        className={`} sticky top-0 z-50 flex flex-col items-center justify-between bg-dark-background px-6 py-4 transition-transform duration-700 
         sm:hidden`}
       >
         <div className="flex w-full items-center justify-between">
