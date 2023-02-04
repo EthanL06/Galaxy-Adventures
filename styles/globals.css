@@ -11,6 +11,10 @@ body {
   @apply bg-background font-sans text-white;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 @layer utilities {
   .button {
     @apply hover:bg-[rgb(119_101_230_/_1)];

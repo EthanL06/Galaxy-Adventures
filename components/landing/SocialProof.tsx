@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 type Props = {};
 const SocialProof = (props: Props) => {
   return (
-    <div className="pattern-dots-xl bg-[#1e1e20]  py-16 text-center text-white/5">
+    <div className="pattern-dots-xl bg-dark-background  py-16 text-center text-white/5">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold text-white"
+        className="px-4 text-4xl font-bold text-white sm:text-4xl"
       >
         Trusted by the <span className="text-dark-accent">Best</span>.
       </motion.div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,8 @@ import { useEffect, useState } from "react";
 
 type Props = {};
 const Destinations = (props: Props) => {
+  const router = useRouter();
+
   const destinations = [
     {
       title: "Explore the Martian Sand Dunes",
@@ -16,6 +19,7 @@ const Destinations = (props: Props) => {
       alt: "Martian Sand Dunes",
       description:
         "A vast and constantly shifting landscape, the sand dunes are shaped by the harsh winds of the Red Planet. It can reach heights of up to 100 meters, and offer a stunning view of the surrounding Martian terrain.",
+      link: "/destinations/mars",
     },
     {
       title: "Explore the Lunar Surface",
@@ -24,6 +28,7 @@ const Destinations = (props: Props) => {
       alt: "Lunar Surface",
       description:
         "Take a guided tour of the Lunar Surface and witness the famous lunar landmarks such as the Sea of Tranquility and the Tycho crater, also experience the thrill of low gravity and a unique opportunity to witness the Earth rise and set from a different perspective.",
+      link: "/destinations/moon",
     },
     {
       title: "Explore a Supermassive Black Hole",
@@ -32,6 +37,7 @@ const Destinations = (props: Props) => {
       alt: "Supermassive Black Hole",
       description:
         "Witness the immense power of a black hole. Observe how it bends and distorts light, and experience the sensation of being on the brink of a singularity. Get a glimpse of the intense gravitational pull and understand the mysteries that remain unsolved about these powerful objects in the universe. DISCLAIMER: Requires the use of a wormhole. Travelers may also experience time dilation.",
+      link: "/destinations/gargantua",
     },
   ];
 
@@ -53,7 +59,7 @@ const Destinations = (props: Props) => {
         viewport={{ once: true }}
         className="mt-4 text-center text-4xl font-bold text-white"
       >
-        Our best destinations for <span className="text-dark-accent">You</span>.
+        Our best destinations for <span className="text-dark-accent">you</span>.
       </motion.div>
       <div className="mt-16 flex w-full flex-col items-start justify-center px-4">
         <div className="flex w-full flex-wrap items-start justify-center gap-16 ">
@@ -98,6 +104,9 @@ const Destinations = (props: Props) => {
                   <Button
                     text="Book Now"
                     className="w-full text-white xsm:w-auto"
+                    onClick={() => {
+                      router.push(destination.link);
+                    }}
                   />
                 </div>
               </div>
@@ -112,7 +121,13 @@ const Destinations = (props: Props) => {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <Button className="mt-16" text="View All Destinations" />
+        <Button
+          className="mt-16"
+          text="View All Destinations"
+          onClick={() => {
+            router.push("/destinations");
+          }}
+        />
       </motion.div>
     </div>
   );

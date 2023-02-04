@@ -1,9 +1,13 @@
 import { Button } from "../global";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+
 type Props = {};
 const CallToAction = (props: Props) => {
+  const router = useRouter();
+
   return (
-    <div className="flex w-full items-center justify-center bg-[#1e1e20]  py-24 lg:px-12 xl:px-48">
+    <div className="flex w-full items-center justify-center bg-dark-background  py-24 lg:px-12 xl:px-48">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,6 +40,9 @@ const CallToAction = (props: Props) => {
             <Button
               className="mt-8 rounded-full bg-dark-accent py-4 px-8 text-white"
               text="Book Now"
+              onClick={() => {
+                router.push("/destinations");
+              }}
             />
           </motion.div>
         </div>
