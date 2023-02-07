@@ -255,7 +255,7 @@ const Listing = ({ destination }: Props) => {
                   </h2>
 
                   <Link
-                    href={"/information/training"}
+                    href={"/packages/training"}
                     className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
                   >
                     Learn more
@@ -295,7 +295,7 @@ const Listing = ({ destination }: Props) => {
                   </h2>
 
                   <Link
-                    href={"/information/vehicles"}
+                    href={"/packages/vehicles"}
                     className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
                   >
                     Learn more
@@ -334,7 +334,7 @@ const Listing = ({ destination }: Props) => {
                   </h2>
 
                   <Link
-                    href={"/information/recovery"}
+                    href={"/packcages/recovery"}
                     className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
                   >
                     Learn more

@@ -106,7 +106,7 @@ const Promotion = (props: Props) => {
             className="mt-8 w-full lg:w-36"
             text="Learn More"
             onClick={() => {
-              router.push("/information");
+              router.push("/packages");
             }}
           />
         </motion.div>

@@ -19,8 +19,12 @@ const Navbar = ({ showLinks = true }: { showLinks?: boolean }) => {
       label: "Destinations",
     },
     {
-      href: "/information",
-      label: "Information",
+      href: "/packages",
+      label: "Packages",
+    },
+    {
+      href: "/sitemap",
+      label: "Sitemap",
     },
     {
       href: "/references",

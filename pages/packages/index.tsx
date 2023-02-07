@@ -2,7 +2,7 @@ type Props = {};
 import { Navbar, Footer, Breadcrumbs } from "@/components/global";
 import Link from "next/link";
 
-const Information = (props: Props) => {
+const Packages = (props: Props) => {
   return (
     <>
       <Navbar />
@@ -11,7 +11,7 @@ const Information = (props: Props) => {
           <div className="">
             <Breadcrumbs />
           </div>
-          <h1>Information</h1>
+          <h1>Packages</h1>
           <p>
             Our goal at Galaxy Adventures is to provide travelers with an
             unparalleled and safe space travel experience. Our experienced team
@@ -30,7 +30,7 @@ const Information = (props: Props) => {
           <h2>Training Packages</h2>
           <p>
             Learn more about our training packages{" "}
-            <Link className="underline" href={"/information/training"}>
+            <Link className="underline" href={"/packages/training"}>
               here.
             </Link>
           </p>
@@ -40,7 +40,7 @@ const Information = (props: Props) => {
           <h2>Vehicle Packages</h2>
           <p>
             Learn more about our vehicle packages{" "}
-            <Link className="underline" href={"/information/vehicles"}>
+            <Link className="underline" href={"/packages/vehicles"}>
               here.
             </Link>
           </p>
@@ -50,7 +50,7 @@ const Information = (props: Props) => {
           <h2>Recovery Packages</h2>
           <p>
             Learn more about our recovery packages{" "}
-            <Link className="underline" href={"/information/recovery"}>
+            <Link className="underline" href={"/packages/recovery"}>
               here.
             </Link>
           </p>
@@ -60,4 +60,4 @@ const Information = (props: Props) => {
     </>
   );
 };
-export default Information;
+export default Packages;

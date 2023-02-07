@@ -10,8 +10,12 @@ const Footer = (props: Props) => {
       label: "Home",
     },
     {
-      href: "/information",
-      label: "Information",
+      href: "/packages",
+      label: "Packages",
+    },
+    {
+      href: "/sitemap",
+      label: "Sitemap",
     },
     {
       href: "/references",
@@ -25,15 +29,15 @@ const Footer = (props: Props) => {
       label: "Destinations",
     },
     {
-      href: "/information/training",
+      href: "/packages/training",
       label: "Training",
     },
     {
-      href: "/information/vehicles",
+      href: "/packages/vehicles",
       label: "Vehicles",
     },
     {
-      href: "/information/recovery",
+      href: "/packages/recovery",
       label: "Recovery",
     },
   ];
