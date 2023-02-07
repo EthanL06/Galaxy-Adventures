@@ -41,7 +41,7 @@ const Footer = (props: Props) => {
   return (
     <footer>
       <div className="bg-[#1F2023] pt-10 lg:pt-20 lg:pb-12 ">
-        <div className="container mx-auto w-4/5 px-4 md:w-11/12 lg:w-10/12 2xl:w-2/3 xl:w-4/5">
+        <div className="container mx-auto w-4/5 px-1 md:w-11/12 lg:w-10/12 2xl:w-2/3 xl:w-4/5">
           <div className="flex flex-wrap">
             <div className="mb-16 w-full lg:mb-0 lg:w-1/3">
               <div className="flex grow basis-0 items-center justify-center lg:justify-start">

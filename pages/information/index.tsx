@@ -49,8 +49,8 @@ const Information = (props: Props) => {
 
           <h2>Recovery Packages</h2>
           <p>
-            Learn more about our vehicle packages{" "}
-            <Link className="underline" href={"/information/vehicles"}>
+            Learn more about our recovery packages{" "}
+            <Link className="underline" href={"/information/recovery"}>
               here.
             </Link>
           </p>

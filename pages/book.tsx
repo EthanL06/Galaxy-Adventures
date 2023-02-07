@@ -178,7 +178,7 @@ const Book = (props: Props) => {
                         <div>
                           <Link
                             className="font-semibold text-dark-accent transition-colors hover:text-light-accent hover:underline"
-                            href={`/destinations/${bookingData.destination}`}
+                            href={`/destinations/${bookingData.destination}#departure`}
                           >
                             Change
                           </Link>
@@ -205,7 +205,7 @@ const Book = (props: Props) => {
                         <div>
                           <Link
                             className="font-semibold text-dark-accent transition-colors hover:text-light-accent hover:underline"
-                            href={`/destinations/${bookingData.destination}`}
+                            href={`/destinations/${bookingData.destination}#tickets`}
                           >
                             Change
                           </Link>
@@ -231,7 +231,7 @@ const Book = (props: Props) => {
                         <div>
                           <Link
                             className="font-semibold text-dark-accent transition-colors hover:text-light-accent hover:underline"
-                            href={`/destinations/${bookingData.destination}`}
+                            href={`/destinations/${bookingData.destination}#training`}
                           >
                             Change
                           </Link>
@@ -253,7 +253,7 @@ const Book = (props: Props) => {
                         <div>
                           <Link
                             className="font-semibold text-dark-accent transition-colors hover:text-light-accent hover:underline"
-                            href={`/destinations/${bookingData.destination}`}
+                            href={`/destinations/${bookingData.destination}#vehicle`}
                           >
                             Change
                           </Link>
@@ -275,7 +275,7 @@ const Book = (props: Props) => {
                         <div>
                           <Link
                             className="font-semibold text-dark-accent transition-colors hover:text-light-accent hover:underline"
-                            href={`/destinations/${bookingData.destination}`}
+                            href={`/destinations/${bookingData.destination}#recovery`}
                           >
                             Change
                           </Link>
@@ -314,7 +314,7 @@ const Book = (props: Props) => {
                       {bookingData.cost} x {bookingData.tickets}{" "}
                       {Number(bookingData.tickets) > 1 ? "tickets" : "ticket"}
                     </div>
-                    <div>
+                    <div className="font-semibold text-white">
                       {data &&
                         costValue &&
                         formatter.format(
@@ -333,7 +333,7 @@ const Book = (props: Props) => {
                       }{" "}
                       Training Package
                     </div>
-                    <div>
+                    <div className="font-semibold text-white">
                       {formatter.format(
                         Number(
                           renderPackage(
@@ -355,7 +355,7 @@ const Book = (props: Props) => {
                       }{" "}
                       Vehicle Package
                     </div>
-                    <div>
+                    <div className="font-semibold text-white">
                       {formatter.format(
                         Number(
                           renderPackage(
@@ -367,7 +367,7 @@ const Book = (props: Props) => {
                     </div>
                   </div>
 
-                  <div className="flex justify-between text-gray-300">
+                  <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-gray-300">
                     <div>
                       {
                         renderPackage(
@@ -377,7 +377,7 @@ const Book = (props: Props) => {
                       }{" "}
                       Recovery Package
                     </div>
-                    <div>
+                    <div className="font-semibold text-white">
                       {formatter.format(
                         Number(
                           renderPackage(

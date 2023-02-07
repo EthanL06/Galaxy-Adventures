@@ -31,6 +31,15 @@ const Listing = ({ destination }: Props) => {
   const [recoveryPackage, setRecoveryPackage] = useState(0);
 
   useEffect(() => {
+    setTrainingPackage(Number(sessionStorage.getItem("trainingPackage")) || 0);
+    setVehiclePackage(Number(sessionStorage.getItem("vehiclePackage")) || 0);
+    setRecoveryPackage(Number(sessionStorage.getItem("recoveryPackage")) || 0);
+
+    setDepartureDate(sessionStorage.getItem("departureDate") || todayDate);
+    setTicketAmount(Number(sessionStorage.getItem("tickets")) || 1);
+  }, []);
+
+  useEffect(() => {
     if (!destination) return;
 
     if (departureDate === "") {
@@ -172,8 +181,9 @@ const Listing = ({ destination }: Props) => {
           <hr className="my-4 rounded-full border-gray-400" />
         </div>
 
-        <div className="">
-          <div className="relative flex flex-col gap-y-4 rounded-lg bg-dark-background p-7 md:top-16">
+        <div>
+          <div className="relative flex flex-col gap-y-4 rounded-lg bg-dark-background p-7 md:top-16 ">
+            <div id="plan" className="absolute -top-8"></div>
             <h2>
               <span className="text-4xl font-bold">{cost}</span>{" "}
               <span className="ml-1 text-lg font-medium text-gray-400">
@@ -182,7 +192,10 @@ const Listing = ({ destination }: Props) => {
             </h2>
 
             <div className="grid grid-cols-1 grid-rows-3 rounded-lg xsm:grid-cols-2 xsm:grid-rows-2 ">
-              <div className="relative col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2 xsm:rounded-tr-none">
+              <div
+                id="departure"
+                className="relative col-span-1 row-span-1 flex items-center justify-between rounded-tl-lg rounded-tr-lg border border-gray-400 px-3 py-2 xsm:rounded-tr-none"
+              >
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     DEPARTURE
@@ -207,7 +220,10 @@ const Listing = ({ destination }: Props) => {
                   <div>{returnDate}</div>
                 </div>
               </div>
-              <div className="col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2 xsm:col-span-2 xsm:row-span-2">
+              <div
+                id="tickets"
+                className="col-span-1 row-span-1 flex justify-between rounded-b-lg border border-t-0 border-gray-400 px-3 py-2 xsm:col-span-2 xsm:row-span-2"
+              >
                 <div>
                   <div className="text-sm font-semibold text-gray-400">
                     TICKETS
@@ -231,7 +247,10 @@ const Listing = ({ destination }: Props) => {
             <div className="flex flex-col gap-y-6">
               <div className="mt-4 flex flex-col gap-y-2">
                 <div className="flex flex-wrap items-center gap-x-2">
-                  <h2 className="text-center text-2xl font-bold xsm:text-left">
+                  <h2
+                    id="training"
+                    className="text-center text-2xl font-bold xsm:text-left"
+                  >
                     SELECT TRAINING
                   </h2>
 
@@ -268,7 +287,10 @@ const Listing = ({ destination }: Props) => {
 
               <div className="flex flex-col gap-y-2">
                 <div className="flex flex-wrap items-center gap-x-2">
-                  <h2 className="text-center text-2xl font-bold xsm:text-left">
+                  <h2
+                    id="vehicle"
+                    className="text-center text-2xl font-bold xsm:text-left"
+                  >
                     SELECT VEHICLE
                   </h2>
 
@@ -304,7 +326,10 @@ const Listing = ({ destination }: Props) => {
 
               <div className="flex flex-col gap-y-2">
                 <div className="flex flex-wrap items-center gap-x-2">
-                  <h2 className="text-center text-2xl font-bold xsm:text-left">
+                  <h2
+                    id="recovery"
+                    className="text-center text-2xl font-bold xsm:text-left"
+                  >
                     SELECT RECOVERY
                   </h2>
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 type Props = {};
 const SocialProof = (props: Props) => {
   return (
-    <div className="pattern-dots-xl bg-dark-background  py-16 text-center text-white/5">
+    <div className="pattern-dots-xl bg-dark-background  py-16 px-2 text-center text-white/5">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -14,50 +14,82 @@ const SocialProof = (props: Props) => {
       >
         Trusted by the <span className="text-dark-accent">Best</span>.
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="pointer-events-none mt-12 flex select-none flex-wrap items-center justify-center gap-16"
-      >
-        <Image
-          className="grayscale"
-          src="/nasa.svg"
-          width={150}
-          height={200}
-          alt="NASA logo"
-        />
-        <Image
-          className="grayscale"
-          src="/spacex.svg"
-          width={300}
-          height={200}
-          alt="SpaceX logo"
-        />
-        <Image
-          className="grayscale"
-          src="/blue_origin.svg"
-          width={200}
-          height={200}
-          alt="Blue Origin logo"
-        />
+      <div className="pointer-events-none mt-12 flex select-none flex-wrap items-center justify-center gap-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            className="grayscale"
+            src="/nasa.svg"
+            width={150}
+            height={200}
+            alt="NASA logo"
+          />
+        </motion.div>
 
-        <Image
-          className="grayscale"
-          src="/lockheed_martin.svg"
-          width={300}
-          height={300}
-          alt="Boeing logo"
-        />
-        <Image
-          className="grayscale"
-          src="/esa.svg"
-          width={150}
-          height={200}
-          alt="ESA logo"
-        />
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            className="grayscale"
+            src="/spacex.svg"
+            width={300}
+            height={200}
+            alt="SpaceX logo"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            className="grayscale"
+            src="/blue_origin.svg"
+            width={200}
+            height={200}
+            alt="Blue Origin logo"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            className="grayscale"
+            src="/lockheed_martin.svg"
+            width={300}
+            height={300}
+            alt="Lockheed Martin logo"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            className="grayscale"
+            src="/esa.svg"
+            width={150}
+            height={200}
+            alt="ESA logo"
+          />
+        </motion.div>
+      </div>
     </div>
   );
 };

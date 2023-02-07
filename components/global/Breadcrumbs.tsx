@@ -26,7 +26,9 @@ const Breadcrumbs = (props: Props) => {
       .join(" ");
   });
 
-  console.log(pathArray);
+  // Remove hashtag from the last breadcrumb
+  pathArray[pathArray.length - 1].breadcrumb =
+    pathArray[pathArray.length - 1].breadcrumb.split("#")[0];
 
   return (
     <div className="mb-4 flex gap-x-2">
