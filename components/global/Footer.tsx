@@ -10,16 +10,12 @@ const Footer = (props: Props) => {
       label: "Home",
     },
     {
-      href: "/packages",
-      label: "Packages",
+      href: "/about",
+      label: "About",
     },
     {
       href: "/sitemap",
       label: "Sitemap",
-    },
-    {
-      href: "/references",
-      label: "References",
     },
   ];
 

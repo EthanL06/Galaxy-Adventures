@@ -13,16 +13,18 @@ const Packages = (props: Props) => {
           </div>
           <h1>Packages</h1>
           <p>
-            Our goal at Galaxy Adventures is to provide travelers with an
-            unparalleled and safe space travel experience. Our experienced team
-            of astronauts, engineers, and scientists work together to ensure
-            that every aspect of the journey, from training to recovery, is
-            seamless and enjoyable. We offer a range of packages and options to
-            accommodate different needs and preferences, so that every traveler
-            can have a customized and memorable experience. We believe that
-            space travel is a unique opportunity to expand one&apos;s horizons,
-            both literally and figuratively, and we are honored to be a part of
-            making that dream a reality for our customers.
+            At Galaxy Adventures, we understand that every traveler&apos;s needs
+            and preferences are different, which is why we offer a range of
+            packages to choose from. Whether you&apos;re looking for a basic
+            training experience, a premium method of recovery, or a luxury
+            travel experience, we have something to suit your needs. Our
+            packages are designed to provide a comprehensive and customizable
+            space travel experience, and they cover everything from training and
+            transportation to recovery. Our team is dedicated to helping
+            travelers make informed decisions and select the right package for
+            their unique needs and preferences, and we&apos;re here to answer
+            any questions you may have. Browse our packages today and start
+            planning your once-in-a-lifetime journey to space.
           </p>
 
           <hr />
