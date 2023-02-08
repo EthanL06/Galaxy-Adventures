@@ -125,7 +125,7 @@ const Book = (props: Props) => {
 
   return (
     <>
-      <Navbar showLinks={false} />
+      <Navbar showLinks={true} />
       {Object.keys(bookingData).length === 0 ? (
         <div className="flex h-[30rem] items-center justify-center">
           <FontAwesomeIcon icon={faSpinner} spin size="3x" />

@@ -29,6 +29,114 @@ const About = (props: Props) => {
       linkName: "Wikimedia Commons",
       href: "https://commons.wikimedia.org/wiki/File:ESA_logo.svg",
     },
+    {
+      source: "Martian Sand Dunes",
+      linkName: "NASA",
+      href: "https://mars.nasa.gov/system/resources/detail_files/5849_Sol201B-PIA06754-full2.jpg",
+    },
+    {
+      source: "Lunar Surface",
+      linkName: "NASA",
+      href: "https://science.nasa.gov/tranquility-base-panorama",
+    },
+    {
+      source: "Space Shuttle Leaving Earth",
+      linkName: "NASA",
+      href: "https://www.nasa.gov/sites/default/files/images/555830main_134launchthroughclouds_full.jpg",
+    },
+    {
+      source: "Earth Surface",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/Q1p7bh3SHj8",
+    },
+    {
+      source: "Earth from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/vhSz50AaFAs",
+    },
+    {
+      source: "Moon from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/uIf6H1or1nE",
+    },
+    {
+      source: "Venus from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/N3BQHYOVq5E",
+    },
+    {
+      source: "Jupiter from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/awYEQyYdHVE",
+    },
+    {
+      source: "Saturn from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/2W-QWAC0mzI",
+    },
+    {
+      source: "Uranus from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/Li41RApUAQA",
+    },
+    {
+      source: "Neptune from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/ScBkW9AKgcA",
+    },
+    {
+      source: "Pluto from Space",
+      linkName: "Unsplash",
+      href: "https://unsplash.com/photos/-5V6VZxSQRo",
+    },
+    {
+      source: "Mars from Space",
+      linkName: "iStock Photo",
+      href: "https://media.istockphoto.com/id/1214890390/photo/planet-mars-in-space.jpg?s=612x612&w=0&k=20&c=zbmCpu6vaD036-6HQNOzHO1qz0tEjUa7boJaoaWG6B0=",
+    },
+    {
+      source: "Gargantua",
+      linkName: "Flickr",
+      href: "https://www.flickr.com/photos/23925401@N06/22790273293",
+    },
+    {
+      source: "Background Particles",
+      linkName: "GitHub",
+      href: "https://github.com/VincentGarreau/particles.js/",
+    },
+  ];
+
+  const videoSources = [
+    {
+      source: "The Sun Illuminating Earth's Surface",
+      linkName: "Pexels",
+      href: "https://www.pexels.com/video/the-sun-illuminating-earth-s-surface-1851190/",
+    },
+    {
+      source: "Video Presentation of the Outer Space",
+      linkName: "Pexels",
+      href: "https://www.pexels.com/video/video-presentation-of-the-outer-space-3194277/",
+    },
+    {
+      source: "Sunlight Shining Brightly on the Planet Earth",
+      linkName: "Pexels",
+      href: "https://www.pexels.com/video/sunlight-shining-brightly-on-the-planet-earth-10755266/",
+    },
+    {
+      source: "Heavenly Bodies in Still Motion Video",
+      linkName: "Pexels",
+      href: "https://www.pexels.com/video/heavenly-bodies-in-still-motion-video-3141209/",
+    },
+    {
+      source: "Futuristic Sci-Fi Space Ship Tunnel",
+      linkName: "Vecteezy",
+      href: "https://www.vecteezy.com/video/1803414-futuristic-sci-fi-space-ship-tunnel",
+    },
+    {
+      source: "Robot Voice Countdown Sound Effect",
+      linkName: "Epidemic Sound",
+      href: "https://www.epidemicsound.com/track/XeJCwVwdrO/",
+    },
   ];
 
   return (
@@ -64,7 +172,7 @@ const About = (props: Props) => {
               Framework)
             </li>
             <li>
-              <Link href={"/https://tailwindcss.com/"}>Tailwind CSS</Link> (CSS
+              <Link href={"https://tailwindcss.com/"}>Tailwind CSS</Link> (CSS
               Framework)
             </li>
 
@@ -84,8 +192,8 @@ const About = (props: Props) => {
             </li>
 
             <li>
-              <Link href={"/https://fonts.google.com/"}>Google Fonts</Link>{" "}
-              (Jost and Inter)
+              <Link href={"https://fonts.google.com/"}>Google Fonts</Link> (Jost
+              and Inter)
             </li>
           </ul>
 
@@ -95,12 +203,39 @@ const About = (props: Props) => {
           <table>
             <thead>
               <tr>
-                <th>Source</th>
+                <th>Image Sources</th>
                 <th>Link</th>
               </tr>
             </thead>
             <tbody>
               {sources.map(({ source, linkName, href }, index) => (
+                <tr key={index}>
+                  <td>{source}</td>
+                  <td>
+                    <Link href={href}>{linkName}</Link>
+                  </td>
+                </tr>
+              ))}
+
+              <tr>
+                <td>Destination Images</td>
+                <td>
+                  <Link href={"https://openai.com/dall-e-2/"}>Dall-E 2</Link>{" "}
+                  and <Link href={"https://midjourney.com/"}>Midjourney</Link>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Video Sources</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {videoSources.map(({ source, linkName, href }, index) => (
                 <tr key={index}>
                   <td>{source}</td>
                   <td>
