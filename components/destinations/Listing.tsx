@@ -99,7 +99,7 @@ const Listing = ({ destination }: Props) => {
         </button>
       </div>
       <Breadcrumbs />
-      <Gallery image={image} />
+      <Gallery image={image} name={title} />
       <div className="relative mt-8 flex grid-cols-2 flex-col gap-8 md:grid">
         <div className="flex flex-col gap-y-4">
           <div>
@@ -497,7 +497,7 @@ const ButtonGroup = () => {
   );
 };
 
-const Gallery = ({ image }: { image: string }) => {
+const Gallery = ({ image, name }: { image: string; name: string }) => {
   return (
     <div className="grid grid-cols-4 grid-rows-2 items-center gap-2 sm:gap-4 lg:gap-8">
       <img
@@ -506,19 +506,19 @@ const Gallery = ({ image }: { image: string }) => {
       />
       <img
         className="col-span-1 row-span-1 h-auto w-full  object-cover"
-        src={image}
+        src={`/${name}/1.png`}
       />
       <img
         className="col-span-1 row-span-1 h-auto w-full  rounded-tr-lg object-cover"
-        src={image}
+        src={`/${name}/2.png`}
       />
       <img
         className="col-span-1 row-span-1 h-auto w-full  object-cover"
-        src={image}
+        src={`/${name}/3.png`}
       />
       <img
         className="col-span-1 row-span-1 h-auto w-full rounded-br-lg object-cover"
-        src={image}
+        src={`/${name}/4.png`}
       />
     </div>
   );
