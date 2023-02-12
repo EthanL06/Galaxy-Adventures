@@ -30,19 +30,14 @@ const About = (props: Props) => {
       href: "https://commons.wikimedia.org/wiki/File:ESA_logo.svg",
     },
     {
-      source: "Martian Sand Dunes",
-      linkName: "NASA",
-      href: "https://mars.nasa.gov/system/resources/detail_files/5849_Sol201B-PIA06754-full2.jpg",
-    },
-    {
-      source: "Lunar Surface",
-      linkName: "NASA",
-      href: "https://science.nasa.gov/tranquility-base-panorama",
-    },
-    {
       source: "Space Shuttle Leaving Earth",
-      linkName: "NASA",
-      href: "https://www.nasa.gov/sites/default/files/images/555830main_134launchthroughclouds_full.jpg",
+      linkName: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:STS-134_launch_seen_from_a_shuttle_training_aircraft_3.jpg",
+    },
+    {
+      source: "Profile Picture",
+      linkName: "Wikimedia Commons",
+      href: "https://commons.wikimedia.org/wiki/File:Default_pfp.jpg",
     },
     {
       source: "Earth Surface",
@@ -95,6 +90,16 @@ const About = (props: Props) => {
       href: "https://media.istockphoto.com/id/1214890390/photo/planet-mars-in-space.jpg?s=612x612&w=0&k=20&c=zbmCpu6vaD036-6HQNOzHO1qz0tEjUa7boJaoaWG6B0=",
     },
     {
+      source: "Martian Sand Dunes",
+      linkName: "NASA",
+      href: "https://mars.nasa.gov/resources/5849/endurance-craters-dazzling-dunes/",
+    },
+    {
+      source: "Lunar Surface",
+      linkName: "Flickr",
+      href: "https://www.flickr.com/photos/nasa2explore/48299943976",
+    },
+    {
       source: "Gargantua",
       linkName: "Flickr",
       href: "https://www.flickr.com/photos/23925401@N06/22790273293",
@@ -104,9 +109,19 @@ const About = (props: Props) => {
       linkName: "GitHub",
       href: "https://github.com/VincentGarreau/particles.js/",
     },
+    {
+      source: "Destination Images",
+      linkName: "Midjourney",
+      href: "https://midjourney.com/",
+    },
   ];
 
   const videoSources = [
+    {
+      source: "Galaxy Adventures Promotional Video",
+      linkName: "YouTube (original video)",
+      href: "https://www.youtube.com/watch?v=A5NI0R_7M3g",
+    },
     {
       source: "The Sun Illuminating Earth's Surface",
       linkName: "Pexels",
@@ -133,10 +148,45 @@ const About = (props: Props) => {
       href: "https://www.vecteezy.com/video/1803414-futuristic-sci-fi-space-ship-tunnel",
     },
     {
-      source: "Robot Voice Countdown Sound Effect",
-      linkName: "Epidemic Sound",
-      href: "https://www.epidemicsound.com/track/XeJCwVwdrO/",
+      source: "Background Music",
+      linkName: "Google Drive (original music)",
+      href: "https://drive.google.com/file/d/13hdgfuQLsxlTUwAmxMfppjJYbfjLsgV_/view",
     },
+  ];
+
+  const imagesSources = [
+    "SpaceX. “File:SpaceX-Logo.svg.” Wikimedia Commons, 2009, https://commons.wikimedia.org/wiki/File:SpaceX-Logo.svg.",
+    "Blue Origin. “File:Blue Origin New Logo.svg.” Wikimedia Commons, 13 Sept. 2016, https://commons.wikimedia.org/wiki/File:Blue_Origin_new_logo.svg. ",
+    "Danne & Blackburn, NY, USA. “NASA Worm Logo.svg.” Wikimedia Commons, 1 Jan. 1975, https://commons.wikimedia.org/wiki/File:NASA_Worm_logo.svg. ",
+    "Lockheed Martin. “File:Lockheed Martin Logo.svg.” Wikimedia Commons, 11 Apr. 2021, https://commons.wikimedia.org/wiki/File:Lockheed_Martin_logo.svg. ",
+    "ESA. “File:ESA Logo.svg.” Wikimedia Commons, https://commons.wikimedia.org/wiki/File:ESA_logo.svg. ",
+    "NASA. “File:STS-134 Launch 12.Jpg - Wikimedia Commons.” Wikimedia Commons, 16 May 2011, https://commons.wikimedia.org/wiki/File:STS-134_launch_12.jpg. ",
+    "ByteDance. “File:Default Pfp.svg.” Wikimedia Commons, 19 Nov. 2018, https://commons.wikimedia.org/wiki/File:Default_pfp.svg. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 27 Dec. 2015, https://unsplash.com/photos/Q1p7bh3SHj8. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 3 Mar. 2021, https://unsplash.com/photos/vhSz50AaFAs. ",
+    "Petrucci, Mike. “Photo by Mike Petrucci on Unsplash.” Beautiful Free Images & Pictures, 26 Mar. 2018, https://unsplash.com/photos/uIf6H1or1nE. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 2 Mar. 2021, https://unsplash.com/photos/N3BQHYOVq5E. ",
+    "Volumes, Planet. “Photo by Planet Volumes on Unsplash.” Beautiful Free Images & Pictures, 5 Sept. 2021, https://unsplash.com/photos/awYEQyYdHVE. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 3 Mar. 2021, https://unsplash.com/photos/2W-QWAC0mzI. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 3 Mar. 2021, https://unsplash.com/photos/Li41RApUAQA. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 26 Feb. 2021, https://unsplash.com/photos/ScBkW9AKgcA. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 26 Feb. 2021, https://unsplash.com/photos/-5V6VZxSQRo. ",
+    "Nasa. “Photo by NASA on UNSPLASH.” Beautiful Free Images & Pictures, 2 Mar. 2021, https://unsplash.com/photos/N3BQHYOVq5E. ",
+    "“Computer Simulated Global View of Venus.” NASA, NASA, 7 May 2008, https://solarsystem.nasa.gov/resources/688/computer-simulated-global-view-of-venus/?category=planets_venus. ",
+    "“'Endurance Crater's' Dazzling Dunes – NASA Mars Exploration.” NASA, NASA, 6 Aug. 2004, https://mars.nasa.gov/resources/5849/endurance-craters-dazzling-dunes/. ",
+    "Johnson, NASA. “Panorama View of Apollo 11 Lunar Surface Photos.” Flickr, Yahoo!, 16 July 2019, https://www.flickr.com/photos/nasa2explore/48299943976. ",
+    "Kanijoman. “Agujero Negro En La Película Interstellar.” Flickr, Yahoo!, 30 Nov. 2015, https://www.flickr.com/photos/23925401@N06/22790273293. ",
+    "Midjourney. https://www.midjourney.com/. (AI-generated images for the destinations)",
+  ];
+
+  const videosSources = [
+    "North, Ingrid. “The Sun Illuminating Earth's Surface - Pexels.” Pexels, 6 Mar. 2019 https://www.pexels.com/video/the-sun-illuminating-earth-s-surface-1851190/. ",
+    "Cone, Frank. “Video Presentation of the Outer Space - Pexels.” Pexels, 17 Dec. 2019, https://www.pexels.com/video/video-presentation-of-the-outer-space-3194277/. ",
+    "Redfield, Joseph. “Sunlight Shining Brightly on the Planet Earth - Pexels.” Pexels, 10 Jan. 2022, https://www.pexels.com/video/sunlight-shining-brightly-on-the-planet-earth-10755266/. ",
+    "Pressmaster. “Heavenly Bodies in Still Motion Video - Pexels.” Pexels, 6 Nov. 2019, https://www.pexels.com/video/heavenly-bodies-in-still-motion-video-3141209/. ",
+    "Werder, Hannes. “Download Futuristic Sci-Fi Space Ship Tunnel for Free.” Vecteezy, 14 Dec. 2020, https://www.vecteezy.com/video/1803414-futuristic-sci-fi-space-ship-tunnel. ",
+    "Galaxy Adventures Promotional Video (original video)",
+    "Background Music (original music)",
   ];
 
   return (
@@ -148,6 +198,7 @@ const About = (props: Props) => {
             <Breadcrumbs />
           </div>
           <h1>About</h1>
+
           <p>
             Galaxy Adventures is a pioneering space tourism company that is
             dedicated to offering unforgettable experiences in space. Our
@@ -199,31 +250,31 @@ const About = (props: Props) => {
 
           <hr />
 
+          <h2>Documents</h2>
+          <ul>
+            <li>
+              <Link href={"/copyright_form.pdf"}>Copyright Form</Link>
+            </li>
+            <li>
+              <Link href={"/work_log.pdf"}>Plan of Work Log</Link>
+            </li>
+          </ul>
+          <hr />
+
           <h2>Sources</h2>
+
           <table>
             <thead>
               <tr>
                 <th>Image Sources</th>
-                <th>Link</th>
               </tr>
             </thead>
             <tbody>
-              {sources.map(({ source, linkName, href }, index) => (
+              {imagesSources.map((source, index) => (
                 <tr key={index}>
                   <td>{source}</td>
-                  <td>
-                    <Link href={href}>{linkName}</Link>
-                  </td>
                 </tr>
               ))}
-
-              <tr>
-                <td>Destination Images</td>
-                <td>
-                  <Link href={"https://openai.com/dall-e-2/"}>Dall-E 2</Link>{" "}
-                  and <Link href={"https://midjourney.com/"}>Midjourney</Link>
-                </td>
-              </tr>
             </tbody>
           </table>
 
@@ -231,16 +282,12 @@ const About = (props: Props) => {
             <thead>
               <tr>
                 <th>Video Sources</th>
-                <th>Link</th>
               </tr>
             </thead>
             <tbody>
-              {videoSources.map(({ source, linkName, href }, index) => (
+              {videosSources.map((source, index) => (
                 <tr key={index}>
                   <td>{source}</td>
-                  <td>
-                    <Link href={href}>{linkName}</Link>
-                  </td>
                 </tr>
               ))}
             </tbody>

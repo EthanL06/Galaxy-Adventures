@@ -7,25 +7,28 @@ type Props = {};
 const Testimonials = (props: Props) => {
   const testimonials = [
     {
-      name: "John Doe",
-      title: "CEO of Company",
+      name: "Faker McFakerson",
+      title: "Space Connoisseur",
       description:
         '"I recently took a tour with Galaxy Adventures and it was an incredible experience. From start to finish, the staff was professional and accommodating, and the tour itself was out of this world (literally). The spacecraft was state-of-the-art and provided a smooth ride with breathtaking views of Earth and the stars. The guides were knowledgeable and provided interesting facts and information throughout the journey. I would highly recommend Galaxy Adventures  to anyone looking for an unforgettable experience."',
-      image: "/",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
     },
     {
       name: "John Doe",
-      title: "CEO of Company",
+      title: "Orbital Experience Evaluator",
       description:
         '"The destinations visited were absolutely breathtaking. The views of the galaxy, planets and stars were truly mesmerizing and the tour was planned to perfection offering the perfect balance of adventure and relaxation. I would highly recommend Galaxy Adventures to anyone looking for an out of this world experience with pretty destinations."',
-      image: "/",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
     },
     {
-      name: "John Doe",
-      title: "CEO of Company",
+      name: "Anonymous",
+      title: "Intergalactic Tourism Critic",
       description:
         '"The staff, spacecraft, and guides were excellent, but what really stood out was the luxurious housing provided. The accommodation was elegant, spacious and comfortable, with large windows that offered stunning views of the galaxy. The bathrooms were luxurious and modern. I highly recommend Galaxy Adventures for a unique and unforgettable experience with luxurious housing."',
-      image: "/",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
     },
   ];
 
@@ -76,7 +79,7 @@ const Testimonials = (props: Props) => {
 
             <div className="mt-4 flex items-center">
               <img
-                src="https://thispersondoesnotexist.com/image"
+                src={testimonial.image}
                 className="h-16 w-16 rounded-full bg-gray-400"
               ></img>
               <div className="ml-4">
