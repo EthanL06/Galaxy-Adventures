@@ -10,8 +10,7 @@ export type Destination = {
   distanceValue: number;
   durationValue: number;
   costValue: number;
-
-  amenities: string[];
-  activities: string[];
-  safety: string[];
+  amenities: string;
+  activities: string;
+  safety: string;
 };

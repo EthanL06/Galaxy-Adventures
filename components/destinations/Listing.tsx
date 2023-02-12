@@ -5,7 +5,6 @@ import {
   faCalendar,
   faEdit,
   faSpinner,
-  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { Button, Breadcrumbs } from "../global";
 import useSWR from "swr";
@@ -73,17 +72,7 @@ const Listing = ({ destination }: Props) => {
     );
   }
 
-  const {
-    title,
-    distance,
-    duration,
-    cost,
-    image,
-    overview,
-    amenities,
-    activities,
-    safety,
-  } = destination;
+  const { title, distance, duration, amenities, activities, safety, cost, image, overview } = destination;
 
   return (
     <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
@@ -124,7 +113,7 @@ const Listing = ({ destination }: Props) => {
 
           <ButtonGroup />
 
-          <div className="prose prose-invert">{overview}</div>
+          <div className="text-gray-400">{overview}</div>
 
           <hr id="amenities" className="my-4 rounded-full border-gray-400" />
 
@@ -136,12 +125,8 @@ const Listing = ({ destination }: Props) => {
               </p>
             </div>
 
-            <div className="prose prose-invert marker:text-white">
-              <ul className="list-disc">
-                {amenities?.map((amenity, index) => {
-                  return <li key={index}>{amenity}</li>;
-                })}
-              </ul>
+            <div id="amenitiesText" className="text-gray-400">
+              {amenities}
             </div>
           </div>
 
@@ -155,12 +140,8 @@ const Listing = ({ destination }: Props) => {
               </p>
             </div>
 
-            <div className="prose prose-invert marker:text-white">
-              <ul className="list-disc">
-                {activities?.map((activity, index) => {
-                  return <li key={index}>{activity}</li>;
-                })}
-              </ul>
+            <div className="text-gray-400">
+              {activities}
             </div>
           </div>
 
@@ -174,12 +155,8 @@ const Listing = ({ destination }: Props) => {
               </p>
             </div>
 
-            <div className="prose prose-invert marker:text-white">
-              <ul className="list-disc">
-                {safety?.map((safe, index) => {
-                  return <li key={index}>{safe}</li>;
-                })}
-              </ul>
+            <div className="text-gray-400">
+              {safety}
             </div>
           </div>
 
