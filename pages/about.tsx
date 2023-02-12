@@ -176,7 +176,7 @@ const About = (props: Props) => {
     "“'Endurance Crater's' Dazzling Dunes – NASA Mars Exploration.” NASA, NASA, 6 Aug. 2004, https://mars.nasa.gov/resources/5849/endurance-craters-dazzling-dunes/. ",
     "Johnson, NASA. “Panorama View of Apollo 11 Lunar Surface Photos.” Flickr, Yahoo!, 16 July 2019, https://www.flickr.com/photos/nasa2explore/48299943976. ",
     "Kanijoman. “Agujero Negro En La Película Interstellar.” Flickr, Yahoo!, 30 Nov. 2015, https://www.flickr.com/photos/23925401@N06/22790273293. ",
-    "Midjourney. https://www.midjourney.com/. (AI-generated images for the destinations)",
+    "Midjourney. https://www.midjourney.com/. (4 secondary images for each destination were AI generated using the website, non-commerical use is allowed)",
   ];
 
   const videosSources = [
