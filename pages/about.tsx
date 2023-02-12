@@ -198,7 +198,6 @@ const About = (props: Props) => {
             <Breadcrumbs />
           </div>
           <h1>About</h1>
-
           <p>
             Galaxy Adventures is a pioneering space tourism company that is
             dedicated to offering unforgettable experiences in space. Our
@@ -213,9 +212,7 @@ const About = (props: Props) => {
             once-in-a-lifetime adventure. Join us as we embark on the ultimate
             journey to the stars.
           </p>
-
           <hr />
-
           <h2>Built With</h2>
           <ul>
             <li>
@@ -247,9 +244,11 @@ const About = (props: Props) => {
               and Inter)
             </li>
           </ul>
-
+          <blockquote>
+            Although this website was made on the listed frameworks above, the
+            theme/template was built by the team.
+          </blockquote>
           <hr />
-
           <h2>Documents</h2>
           <ul>
             <li>
@@ -260,9 +259,7 @@ const About = (props: Props) => {
             </li>
           </ul>
           <hr />
-
           <h2>Sources</h2>
-
           <table>
             <thead>
               <tr>
@@ -277,7 +274,6 @@ const About = (props: Props) => {
               ))}
             </tbody>
           </table>
-
           <table>
             <thead>
               <tr>
