@@ -10,7 +10,28 @@
     "durationValue": 30,
     "cost": "$50,000",
     "costValue": 50000,
-    "image": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    "image": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+
+    "amenities": [
+      "360-degree views of the Earth and the surrounding space",
+      "Comfortable, zero-gravity sleeping quarters",
+      "High-speed internet connectivity for communication with friends and family on Earth",
+      "Fresh, delicious food prepared by expert chefs",
+      "On-board gym with weightless exercise equipment"
+    ],
+    "activities": [
+      "Space walks and EVAs (extravehicular activities)",
+      "Observing and photographing Earth and the cosmos through high-powered telescopes",
+      "Participating in experiments and scientific research conducted on the station",
+      "Learning about space and space travel from experienced astronauts and cosmonauts"
+    ],
+    "safety": [
+      "Emergency escape pods for quick evacuation in case of an emergency",
+      "Advanced life support systems, including air purification and water recycling systems",
+      "High-tech fire suppression and containment systems",
+      "Regular safety drills and training sessions for all passengers and crew members",
+      "Continuous monitoring and maintenance of the station by ground control"
+    ]
   },
   {
     "title": "Moon",
@@ -23,7 +44,27 @@
     "durationValue": 7,
     "cost": "$300,000",
     "costValue": 300000,
-    "image": "https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80"
+    "image": "https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80",
+
+    "amenities": [
+      "High-tech lunar habitats designed for long-term stays",
+      "Views of the Earth and the surrounding space from the lunar surface",
+      "On-board lab facilities for conducting scientific experiments",
+      "Virtual reality experiences that simulate a variety of environments, from Earth to other planets",
+      "Comfortable sleeping quarters designed for the low-gravity environment of the Moon"
+    ],
+    "activities": [
+      "Moon walks and exploration of the lunar surface",
+      "Photography and videography of the lunar landscape and the surrounding space",
+      "Science experiments and studies of the Moon's geology, atmosphere, and environment"
+    ],
+    "safety": [
+      "Advanced life support systems, including air and water recycling systems",
+      "Radiation protection systems and gear for all passengers and crew members",
+      "Emergency response and evacuation procedures in case of an emergency",
+      "Continuous monitoring and maintenance by ground control to ensure the safety and well-being of all passengers and crew members",
+      "Extensive training for all passengers and crew members in lunar operations, survival, and emergency response"
+    ]
   },
   {
     "title": "Mars",
@@ -36,7 +77,28 @@
     "durationValue": 630,
     "cost": "$1 million",
     "costValue": 1000000,
-    "image": "https://media.istockphoto.com/id/1214890390/photo/planet-mars-in-space.jpg?s=612x612&w=0&k=20&c=zbmCpu6vaD036-6HQNOzHO1qz0tEjUa7boJaoaWG6B0="
+    "image": "https://media.istockphoto.com/id/1214890390/photo/planet-mars-in-space.jpg?s=612x612&w=0&k=20&c=zbmCpu6vaD036-6HQNOzHO1qz0tEjUa7boJaoaWG6B0=",
+
+    "amenities": [
+      "High-tech habitats designed for long-term stays on the Martian surface",
+      "Views of the Martian landscape and the surrounding space",
+      "On-board laboratory facilities for conducting scientific experiments",
+      "Virtual reality experiences that simulate a variety of environments, from Earth to other planets",
+      "Comfortable sleeping quarters designed for the low-gravity environment of Mars"
+    ],
+    "activities": [
+      "Martian surface walks and exploration",
+      "Photography and videography of the Martian landscape and the surrounding space",
+      "Science experiments and studies of the Martian geology, atmosphere, and environment",
+      "Virtual reality experiences that simulate a variety of environments, from Earth to other planets"
+    ],
+    "safety": [
+      "Advanced life support systems, including air and water recycling systems",
+      "Radiation protection systems and gear for all passengers and crew members",
+      "Emergency response and evacuation procedures in case of an emergency",
+      "Continuous monitoring and maintenance by ground control to ensure the safety and well-being of all passengers and crew members",
+      "Extensive training for all passengers and crew members in Martian operations, survival, and emergency response"
+    ]
   },
   {
     "title": "Venus",
@@ -49,7 +111,11 @@
     "durationValue": 540,
     "cost": "$1 million",
     "costValue": 1000000,
-    "image": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    "image": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   },
   {
     "title": "Jupiter",
@@ -62,7 +128,11 @@
     "durationValue": 1095,
     "cost": "$5 million",
     "costValue": 5000000,
-    "image": "https://images.unsplash.com/photo-1630839437035-dac17da580d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80"
+    "image": "https://images.unsplash.com/photo-1630839437035-dac17da580d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   },
   {
     "title": "Saturn",
@@ -75,7 +145,11 @@
     "durationValue": 1825,
     "cost": "$10 million",
     "costValue": 10000000,
-    "image": "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    "image": "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   },
   {
     "title": "Uranus",
@@ -88,7 +162,11 @@
     "durationValue": 2920,
     "cost": "$15 million",
     "costValue": 15000000,
-    "image": "https://images.unsplash.com/photo-1614732484003-ef9881555dc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    "image": "https://images.unsplash.com/photo-1614732484003-ef9881555dc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   },
   {
     "title": "Neptune",
@@ -101,7 +179,11 @@
     "durationValue": 4380,
     "cost": "$20 million",
     "costValue": 20000000,
-    "image": "https://images.unsplash.com/photo-1614728423169-3f65fd722b7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+    "image": "https://images.unsplash.com/photo-1614728423169-3f65fd722b7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   },
   {
     "title": "Pluto",
@@ -114,7 +196,11 @@
     "durationValue": 5475,
     "cost": "$25 million",
     "costValue": 25000000,
-    "image": "https://images.unsplash.com/photo-1614314107768-6018061b5b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    "image": "https://images.unsplash.com/photo-1614314107768-6018061b5b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   },
   {
     "title": "Gargantua",
@@ -127,6 +213,10 @@
     "durationValue": 9125,
     "cost": "$100 million",
     "costValue": 100000000,
-    "image": "/gargantua.png"
+    "image": "/gargantua.png",
+
+    "amenities": [],
+    "activities": [],
+    "safety": []
   }
 ]

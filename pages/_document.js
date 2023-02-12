@@ -43,7 +43,7 @@ export default function Document() {
         />
 
         <meta property="twitter:image" content="" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/galaxy-logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

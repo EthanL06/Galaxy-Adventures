@@ -143,7 +143,7 @@ const About = (props: Props) => {
     <>
       <Navbar />
       <div className="mx-auto flex min-h-screen w-full max-w-3xl justify-center px-4 py-10 sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl">
-        <article className="prose prose-sm prose-invert mx-auto sm:prose-base lg:prose-lg 2xl:prose-2xl xl:prose-xl">
+        <article className="prose prose-sm prose-invert mx-auto sm:prose-base lg:prose-lg  xl:prose-xl">
           <div className="">
             <Breadcrumbs />
           </div>
