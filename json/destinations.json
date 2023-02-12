@@ -3,11 +3,11 @@
     "title": "Low Earth Orbit",
     "distance": "1,200 mi.",
     "distanceValue": 1200,
-    "duration": "1 month",
+    "duration": "2 weeks",
 
     "overview": "Low Earth orbit (LEO) is a destination that offers space tourists a unique experience of viewing Earth from a vantage point just a few hundred miles above the surface. LEO is the region of space between approximately 100 and 1,200 miles above the Earth's surface, and it is home to many human-made satellites and the International Space Station (ISS). Space tourism companies offer trips to LEO that allow individuals to experience weightlessness, see the curvature of the Earth, and witness the beauty of the planet from a new perspective. ",
 
-    "durationValue": 30,
+    "durationValue": 14,
     "cost": "$50,000",
     "costValue": 50000,
     "image": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
@@ -19,11 +19,11 @@
     "title": "Moon",
     "distance": "238,900 mi.",
     "distanceValue": 238900,
-    "duration": "1 week",
+    "duration": "1 month",
 
     "overview": "The Moon is Earth's only natural satellite and the fifth-largest satellite in the Solar System. It is approximately 238,855 miles away from Earth and has a diameter of about 3,476 km. The Moon is believed to have formed around 4.5 billion years ago from debris left over after a Mars-sized object collided with Earth. The Moon's surface is characterized by vast plains, impact craters, mountains, and deep valleys. The Moon has no atmosphere or magnetic field, and its temperature varies greatly between its day and night sides. The Moon is also known for its phases, caused by its orbit around Earth, and for its effect on tides.",
 
-    "durationValue": 7,
+    "durationValue": 30,
     "cost": "$300,000",
     "costValue": 300000,
     "image": "https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80",
