@@ -72,7 +72,7 @@ const Listing = ({ destination }: Props) => {
     );
   }
 
-  const { title, distance, duration, cost, image, overview } = destination;
+  const { title, distance, duration, amenities, activities, safety, cost, image, overview } = destination;
 
   return (
     <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
@@ -125,14 +125,8 @@ const Listing = ({ destination }: Props) => {
               </p>
             </div>
 
-            <div className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              quod, explicabo sequi repellendus facilis, cumque obcaecati,
-              maiores dignissimos quisquam voluptatem eveniet accusantium fuga
-              recusandae sit rem? Voluptatibus deserunt aut excepturi odio qui
-              aliquam quidem cupiditate iusto obcaecati totam. Necessitatibus
-              sint reprehenderit vel! Ipsam, deleniti quam nulla perspiciatis
-              minus perferendis libero?
+            <div id="amenitiesText" className="text-gray-400">
+              {amenities}
             </div>
           </div>
 
@@ -147,13 +141,7 @@ const Listing = ({ destination }: Props) => {
             </div>
 
             <div className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              quod, explicabo sequi repellendus facilis, cumque obcaecati,
-              maiores dignissimos quisquam voluptatem eveniet accusantium fuga
-              recusandae sit rem? Voluptatibus deserunt aut excepturi odio qui
-              aliquam quidem cupiditate iusto obcaecati totam. Necessitatibus
-              sint reprehenderit vel! Ipsam, deleniti quam nulla perspiciatis
-              minus perferendis libero?
+              {activities}
             </div>
           </div>
 
@@ -168,13 +156,7 @@ const Listing = ({ destination }: Props) => {
             </div>
 
             <div className="text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              quod, explicabo sequi repellendus facilis, cumque obcaecati,
-              maiores dignissimos quisquam voluptatem eveniet accusantium fuga
-              recusandae sit rem? Voluptatibus deserunt aut excepturi odio qui
-              aliquam quidem cupiditate iusto obcaecati totam. Necessitatibus
-              sint reprehenderit vel! Ipsam, deleniti quam nulla perspiciatis
-              minus perferendis libero?
+              {safety}
             </div>
           </div>
 

@@ -68,3 +68,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
   }
 }
+
+#amenitiesText {
+  white-space: pre-wrap;
+}
