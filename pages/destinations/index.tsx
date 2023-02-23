@@ -17,7 +17,6 @@ const Destinations = () => {
   );
 
   useEffect(() => {
-    console.log(data);
     setDestinations(data);
     setFilteredDestinations(data);
   }, [data]);

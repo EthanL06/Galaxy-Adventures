@@ -11,7 +11,6 @@ export function useTodayDate() {
     const yyyy = today.getFullYear();
 
     const todaysDate = yyyy + "-" + mm + "-" + dd;
-    console.log(todaysDate);
     setTodayDate(todaysDate);
   }, []);
 
