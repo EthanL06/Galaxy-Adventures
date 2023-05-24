@@ -49,6 +49,16 @@ const Packages = (props: Props) => {
 
           <hr />
 
+          <h2>Food Packages</h2>
+          <p>
+            Learn more about our food packages{" "}
+            <Link className="underline" href={"/packages/food"}>
+              here.
+            </Link>
+          </p>
+
+          <hr />
+
           <h2>Recovery Packages</h2>
           <p>
             Learn more about our recovery packages{" "}

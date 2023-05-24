@@ -29,11 +29,13 @@ const Listing = ({ destination }: Props) => {
   const [trainingPackage, setTrainingPackage] = useState(0);
   const [vehiclePackage, setVehiclePackage] = useState(0);
   const [recoveryPackage, setRecoveryPackage] = useState(0);
+  const [foodPackage, setFoodPackage] = useState(0);
 
   useEffect(() => {
     setTrainingPackage(Number(sessionStorage.getItem("trainingPackage")) || 0);
     setVehiclePackage(Number(sessionStorage.getItem("vehiclePackage")) || 0);
     setRecoveryPackage(Number(sessionStorage.getItem("recoveryPackage")) || 0);
+    setFoodPackage(Number(sessionStorage.getItem("foodPackage")) || 0);
 
     setDepartureDate(sessionStorage.getItem("departureDate") || todayDate);
     setTicketAmount(Number(sessionStorage.getItem("tickets")) || 1);
@@ -72,7 +74,17 @@ const Listing = ({ destination }: Props) => {
     );
   }
 
-  const { title, distance, duration, amenities, activities, safety, cost, image, overview } = destination;
+  const {
+    title,
+    distance,
+    duration,
+    amenities,
+    activities,
+    safety,
+    cost,
+    image,
+    overview,
+  } = destination;
 
   return (
     <div className="min-h-screen  px-6 pb-16 lg:px-12 lgg:px-24 xl:px-52">
@@ -140,9 +152,7 @@ const Listing = ({ destination }: Props) => {
               </p>
             </div>
 
-            <div className="text-gray-400">
-              {activities}
-            </div>
+            <div className="text-gray-400">{activities}</div>
           </div>
 
           <hr id="safety" className="my-4 rounded-full border-gray-400" />
@@ -155,9 +165,7 @@ const Listing = ({ destination }: Props) => {
               </p>
             </div>
 
-            <div className="text-gray-400">
-              {safety}
-            </div>
+            <div className="text-gray-400">{safety}</div>
           </div>
 
           <hr className="my-4 rounded-full border-gray-400" />
@@ -309,6 +317,45 @@ const Listing = ({ destination }: Props) => {
               <div className="flex flex-col gap-y-2">
                 <div className="flex flex-wrap items-center gap-x-2">
                   <h2
+                    id="food"
+                    className="text-center text-2xl font-bold xsm:text-left"
+                  >
+                    SELECT FOOD
+                  </h2>
+
+                  <Link
+                    href={"/packages/food"}
+                    className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
+                  >
+                    Learn more
+                  </Link>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+                  <Package
+                    title="Basic"
+                    packageIndex={foodPackage}
+                    setPackage={() => setFoodPackage(0)}
+                    ind={0}
+                  />
+                  <Package
+                    title="Premium"
+                    packageIndex={foodPackage}
+                    setPackage={() => setFoodPackage(1)}
+                    ind={1}
+                  />
+                  <Package
+                    title="Deluxe"
+                    packageIndex={foodPackage}
+                    setPackage={() => setFoodPackage(2)}
+                    ind={2}
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <div className="flex flex-wrap items-center gap-x-2">
+                  <h2
                     id="recovery"
                     className="text-center text-2xl font-bold xsm:text-left"
                   >
@@ -316,7 +363,7 @@ const Listing = ({ destination }: Props) => {
                   </h2>
 
                   <Link
-                    href={"/packcages/recovery"}
+                    href={"/packages/recovery"}
                     className="text-sm font-semibold text-gray-500 underline underline-offset-2 transition-colors hover:text-gray-400"
                   >
                     Learn more
@@ -358,6 +405,7 @@ const Listing = ({ destination }: Props) => {
                 sessionStorage.setItem("trainingPackage", "" + trainingPackage);
                 sessionStorage.setItem("vehiclePackage", "" + vehiclePackage);
                 sessionStorage.setItem("recoveryPackage", "" + recoveryPackage);
+                sessionStorage.setItem("foodPackage", "" + foodPackage);
 
                 router.push("/book");
               }}

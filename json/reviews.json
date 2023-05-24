@@ -1,0 +1,38 @@
+[
+  {
+    "destination": "Low Earth Orbit",
+    "review": 4,
+    "comments": [
+      {
+        "name": "AdventurousExplorer",
+        "comment": "Absolutely mesmerizing! Seeing Earth from space is a life-changing experience. The weightlessness and the views are out of this world. Just wish the trip could be a bit longer!"
+      },
+      {
+        "name": "StellarTraveler",
+        "comment": "An incredible taste of space travel! The training was thorough, and the journey was smooth. Floating in zero gravity was surreal. Would highly recommend this as a starting point for space enthusiasts."
+      },
+      {
+        "name": "EarthGazer",
+        "comment": "Loved every moment! The breathtaking sunrises and sunsets were unforgettable. The only downside was the limited time spent in orbit. Could have stayed up there forever!"
+      }
+    ]
+  },
+  {
+    "destination": "Mars",
+    "review": 4,
+    "comments": [
+      {
+        "name": "AdventurousExplorer",
+        "comment": "Absolutely mesmerizing! Seeing Earth from space is a life-changing experience. The weightlessness and the views are out of this world. Just wish the trip could be a bit longer!"
+      },
+      {
+        "name": "StellarTraveler",
+        "comment": "An incredible taste of space travel! The training was thorough, and the journey was smooth. Floating in zero gravity was surreal. Would highly recommend this as a starting point for space enthusiasts."
+      },
+      {
+        "name": "EarthGazer",
+        "comment": "Loved every moment! The breathtaking sunrises and sunsets were unforgettable. The only downside was the limited time spent in orbit. Could have stayed up there forever!"
+      }
+    ]
+  }
+]

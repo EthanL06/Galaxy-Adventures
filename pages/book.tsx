@@ -26,6 +26,7 @@ const Book = (props: Props) => {
       trainingPackage: string;
       vehiclePackage: string;
       recoveryPackage: string;
+      foodPackage: string;
     }
   );
 
@@ -46,7 +47,8 @@ const Book = (props: Props) => {
       sessionStorage.getItem("tickets") === null ||
       sessionStorage.getItem("trainingPackage") === null ||
       sessionStorage.getItem("vehiclePackage") === null ||
-      sessionStorage.getItem("recoveryPackage") === null
+      sessionStorage.getItem("recoveryPackage") === null ||
+      sessionStorage.getItem("foodPackage") === null
     ) {
       router.push("/");
       return;
@@ -61,6 +63,7 @@ const Book = (props: Props) => {
       trainingPackage: sessionStorage.getItem("trainingPackage") || "",
       vehiclePackage: sessionStorage.getItem("vehiclePackage") || "",
       recoveryPackage: sessionStorage.getItem("recoveryPackage") || "",
+      foodPackage: sessionStorage.getItem("foodPackage") || "",
     });
   }, []);
 
@@ -108,6 +111,19 @@ const Book = (props: Props) => {
             return ["Vertical Landing", 100000];
           case 2:
             return ["Aerial Recovery", 200000];
+          default:
+            return "Invalid Package Type";
+        }
+      }
+
+      case "Food": {
+        switch (number) {
+          case 0:
+            return ["Basic", 500];
+          case 1:
+            return ["Premium", 1000];
+          case 2:
+            return ["Deluxe", 2500];
           default:
             return "Invalid Package Type";
         }
@@ -262,6 +278,28 @@ const Book = (props: Props) => {
 
                       <div className="flex items-center justify-between">
                         <div>
+                          <div className="text-sm font-semibold">FOOD</div>
+                          <div className="text-gray-300">
+                            {
+                              renderPackage(
+                                "Food",
+                                Number(bookingData.foodPackage)
+                              )[0]
+                            }
+                          </div>
+                        </div>
+                        <div>
+                          <Link
+                            className="font-semibold text-dark-accent transition-colors hover:text-light-accent hover:underline"
+                            href={`/destinations/${bookingData.destination}#vehicle`}
+                          >
+                            Change
+                          </Link>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div>
                           <div className="text-sm font-semibold">RECOVERY</div>
                           <div className="text-gray-300">
                             {
@@ -371,6 +409,28 @@ const Book = (props: Props) => {
                     <div>
                       {
                         renderPackage(
+                          "Food",
+                          Number(bookingData.foodPackage)
+                        )[0]
+                      }{" "}
+                      Food Package
+                    </div>
+                    <div className="font-semibold text-white">
+                      {formatter.format(
+                        Number(
+                          renderPackage(
+                            "Food",
+                            Number(bookingData.foodPackage)
+                          )[1]
+                        )
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-gray-300">
+                    <div>
+                      {
+                        renderPackage(
                           "Recovery",
                           Number(bookingData.recoveryPackage)
                         )[0]
@@ -408,6 +468,12 @@ const Book = (props: Props) => {
                             renderPackage(
                               "Vehicle",
                               Number(bookingData.vehiclePackage)
+                            )[1]
+                          ) +
+                          Number(
+                            renderPackage(
+                              "Food",
+                              Number(bookingData.foodPackage)
                             )[1]
                           ) +
                           Number(

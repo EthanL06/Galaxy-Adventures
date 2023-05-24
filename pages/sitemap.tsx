@@ -51,6 +51,9 @@ const Sitemap = (props: Props) => {
                   <Link href={"/packages/vehicles"}>Vehicle</Link>
                 </li>
                 <li>
+                  <Link href={"/packages/food"}>Food</Link>
+                </li>
+                <li>
                   <Link href={"/packages/recovery"}>Recovery</Link>
                 </li>
               </ul>
