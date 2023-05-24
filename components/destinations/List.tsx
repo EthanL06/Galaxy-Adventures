@@ -46,6 +46,7 @@ const List = ({ destinations, isLoading }: Props) => {
               duration={destination.duration}
               cost={destination.cost}
               image={destination.image}
+              rating={destination.rating}
             />
           ))}
         </div>

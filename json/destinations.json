@@ -4,6 +4,7 @@
     "distance": "1,200 mi.",
     "distanceValue": 1200,
     "duration": "2 weeks",
+    "rating": 4,
 
     "overview": "Low Earth orbit (LEO) is a destination that offers space tourists a unique experience of viewing Earth from a vantage point just a few hundred miles above the surface. LEO is the region of space between approximately 100 and 1,200 miles above the Earth's surface, and it is home to many human-made satellites and the International Space Station (ISS). Space tourism companies offer trips to LEO that allow individuals to experience weightlessness, see the curvature of the Earth, and witness the beauty of the planet from a new perspective. ",
 
@@ -20,6 +21,7 @@
     "distance": "238,900 mi.",
     "distanceValue": 238900,
     "duration": "1 month",
+    "rating": 4.5,
 
     "overview": "The Moon is Earth's only natural satellite and the fifth-largest satellite in the Solar System. It is approximately 238,855 miles away from Earth and has a diameter of about 3,476 km. The Moon is believed to have formed around 4.5 billion years ago from debris left over after a Mars-sized object collided with Earth. The Moon's surface is characterized by vast plains, impact craters, mountains, and deep valleys. The Moon has no atmosphere or magnetic field, and its temperature varies greatly between its day and night sides. The Moon is also known for its phases, caused by its orbit around Earth, and for its effect on tides.",
 
@@ -36,6 +38,7 @@
     "distance": "75.4 million mi.",
     "distanceValue": 75400000,
     "duration": "21 months",
+    "rating": 4,
 
     "overview": "Mars is the fourth planet from the Sun in the Solar System and is often referred to as the \"Red Planet\" due to its reddish appearance. It has a diameter of about 6,792 km and is about 142.2 million miles away from the Sun. Mars has a thin atmosphere composed mostly of carbon dioxide, and it has the largest volcano in the Solar System, Olympus Mons, as well as the longest canyon, Valles Marineris. The planet has a very cold climate, with an average temperature of about -80 degrees Fahrenheit. There is evidence of water on Mars in the form of ice and there have been numerous missions to Mars by various space agencies in an attempt to understand the planet and search for signs of past or present life.",
 
@@ -52,6 +55,7 @@
     "distance": "67.2 million mi.",
     "distanceValue": 67200000,
     "duration": "18 months",
+    "rating": 2,
 
     "overview": "Venus is the second planet from the Sun in the Solar System. It has a diameter of about 12,104 km and is about 67 million miles away from the Sun. Venus has a thick atmosphere composed mostly of carbon dioxide, which causes a greenhouse effect that makes it the hottest planet in the Solar System, with surface temperatures reaching up to 864 degrees Fahrenheit. The planet's surface is mostly covered by volcanoes, mountains, and vast plains. It also has a thick layer of clouds that are composed mostly of sulfuric acid. Venus has a very slow rotation on its axis, taking about 243 Earth days to complete one rotation, which is longer than its year. There have been several missions to Venus by various space agencies to study its atmosphere, surface and potential for past or present life.",
 
@@ -68,6 +72,7 @@
     "distance": "484 million mi.",
     "distanceValue": 484000000,
     "duration": "3 years",
+    "rating": 4,
 
     "overview": "Jupiter is the fifth planet from the Sun in the Solar System and is the largest planet in the Solar System. It has a diameter of about 139,822 km and is about 484 million miles away from the Sun. Jupiter is primarily composed of hydrogen and helium and has a strong internal heat source. It has a large number of moons, with 79 known to be in orbit around the planet. The most notable of Jupiter's moons are Io, Europa, Ganymede, and Callisto, also known as the Galilean moons, which were first observed by Galileo Galilei in 1610. Jupiter also has a large, colorful atmosphere with bands of clouds, storms, and the Great Red Spot, a giant swirling storm that has been present for at least 350 years. The planet also has a strong magnetic field and radiation belts.",
     "amenities": "Jupiter, despite its immense size and intimidating appearance, offers a range of intriguing amenities for those who venture to this giant world. \n● Majestic Clouds: Jupiter's atmosphere is dotted with massive clouds of ammonia, water vapor, and methane that swirl and change shape in a never-ending dance. \n● Dynamic Weather: Jupiter is known for its dynamic and constantly changing weather patterns, with powerful storms that rage across the planet's atmosphere. The most famous of these storms is the Great Red Spot, a massive storm system that has raged for at least 400 years. \n● Radiant Rings: Jupiter has a faint, but distinctive ring system that is comprised of dust and ice particles. These rings sparkle and glimmer in the light of the sun, creating a mesmerizing celestial display. \n● Majestic Moons: Jupiter has 79 moons, each with their own distinct features and geological characteristics. Some of these moons are small and icy, while others are larger and more geologically active. \n● Glowing Auroras: Jupiter has intense auroras that light up the planet's poles. These auroras are caused by the interaction of the planet's magnetic field with charged particles from the solar wind, creating a dazzling light show in the planet's dark atmosphere. \n● Imposing the Interior: Despite its lack of a solid surface, advanced imaging technologies have allowed scientists to study Jupiter's interior, including its composition and structure, providing insight into the formation and evolution of gas giant planets.",
@@ -84,6 +89,7 @@
     "distance": "886 million mi.",
     "distanceValue": 886000000,
     "duration": "5 years",
+    "rating": 4,
 
     "overview": "Saturn is the sixth planet from the Sun in the Solar System and is the second largest planet in the Solar System. It has a diameter of about 116,460 km and is about 1.4 billion miles away from the Sun. Saturn is primarily composed of hydrogen and helium, like Jupiter, and it has a similar atmosphere with bands of clouds and storms. However, the most striking feature of Saturn is its ring system, which is made up of countless small particles of ice and rock. The rings are divided into several distinct parts, including the B ring, the C ring, and the D ring. Saturn also has a significant number of known moons, with 82 moons in orbit around the planet, including the largest moon in the Solar System, Titan, and the geologically active Enceladus.",
     "amenities": "Saturn, with its breathtaking beauty and unique environment, offers a wealth of amenities for those who venture to this magnificent world. \n● Spectacular Clouds: Saturn's atmosphere is dotted with massive clouds of ammonia and water vapor that swirl and change shape in a never-ending dance. These clouds create a breathtaking and dynamic landscape, with shifting patterns and brilliant colors. \n● Mesmerizing Rings: Saturn is most famous for its magnificent ring system, which is comprised of countless ice particles, dust, and rocks. The rings sparkle and glimmer in the light of the sun, creating a celestial display that is truly awe-inspiring. \n● Dynamic Weather: Saturn has a constantly changing weather pattern, with powerful storms that rage across the planet's atmosphere. These storms can create towering clouds and massive waves, making the planet's atmosphere a dynamic and ever-changing landscape. \n● Majestic Moons: Saturn has 82 moons, each with their own distinct features and geological characteristics. Some of these moons are small and icy, while others are larger and more geologically active. \n● Glowing Auroras: Saturn has intense auroras that light up the planet's poles. These auroras are caused by the interaction of the planet's magnetic field with charged particles from the solar wind, creating a dazzling light show in the planet's dark atmosphere. \n● Imaging the Interior: Despite its lack of a solid surface, advanced imaging technologies have allowed scientists to study Saturn's interior, including its composition and structure, providing insight into the formation and evolution of gas giant planets.",
@@ -100,6 +106,7 @@
     "distance": "1.8 billion mi.",
     "distanceValue": 1800000000,
     "duration": "8 years",
+    "rating": 3,
 
     "overview": "Uranus is the seventh planet from the Sun in the Solar System and is the third largest of the four giant planets. It has a diameter of about 50,724 km and is about 1.8 billion miles away from the Sun. Uranus is primarily composed of hydrogen and helium, like Jupiter and Saturn, but it has a much colder atmosphere, with an average temperature of about -357 degrees Fahrenheit. Uranus has a unique feature among the planets in our solar system: it has an extreme axial tilt of about 98 degrees, which means that it essentially rotates on its side. This causes its seasons to be extreme, with one pole facing the sun for 84 Earth years, followed by the other pole facing the sun for the next 84 years. Uranus also has a ring system, which is made up of narrow, dark rings, and 27 known moons, the most notable of which is Miranda.",
 
@@ -117,6 +124,7 @@
     "distance": "2.8 billion mi.",
     "distanceValue": 2800000000,
     "duration": "12 years",
+    "rating": 4,
 
     "overview": "Neptune is the eighth and last planet from the Sun in the Solar System and is the fourth largest of the four giant planets. It has a diameter of about 49,244 km and is about 2.8 billion miles away from the Sun. Like Uranus, Neptune is primarily composed of hydrogen and helium, but it has a much colder atmosphere, with an average temperature of about -353 degrees Fahrenheit. Neptune has a blue color due to methane in its atmosphere. It has a ring system, which is made up of five narrow, faint rings, and 14 known moons, the most notable of which is Triton. Triton is a large, icy moon that has a retrograde orbit, meaning it orbits in the opposite direction of the planet's rotation. ",
 
@@ -134,12 +142,13 @@
     "distance": "3.7 billion mi.",
     "distanceValue": 3700000000,
     "duration": "15 years",
+    "rating": 3,
 
     "overview": "Pluto is a dwarf planet in the Kuiper Belt, a region of the Solar System beyond Neptune that is home to many small, icy bodies. It was discovered in 1930 by Clyde Tombaugh and was originally classified as the ninth planet in the Solar System. However, in 2006, the International Astronomical Union reclassified Pluto as a \"dwarf planet\" due to its small size and the discovery of other similar objects in the Kuiper Belt. Pluto has a diameter of about 2,377 km and is about 4.67 billion miles away from the Sun. It is composed mostly of rock and ice. It has five known moons, the largest of which is Charon. Charon is a large, icy moon that is about half the size of Pluto and it is so large that it causes Pluto and Charon to be considered as a binary system, because they both orbit a common center of mass. Pluto has a highly eccentric and inclined orbit, which at its closest approach to the Sun (perihelion) is inside Neptune's orbit. It takes 248.09 Earth years to orbit the Sun once.",
 
     "amenities": "Pluto, with its intriguing features and captivating environment, provides a range of amenities for those who venture to this distant world. One of the most remarkable sights is its surface, which is covered in a blanket of methane and nitrogen ice, with complex geological formations such as mountains and valleys carved into it. The dwarf planet also has five known moons, each with their own unique terrain and geological features, providing ample opportunity for exploration and discovery. Another intriguing aspect of Pluto is its thin atmosphere, composed of nitrogen and methane, which is constantly changing and creating stunning hazes in the planet's sky. The dwarf planet's location in the Kuiper Belt, a region of the solar system rich in icy bodies, also provides a unique opportunity to study the formation and evolution of the solar system. With all these features and more, Pluto is a fascinating destination for space enthusiasts and scientists alike.",
     "activities": "Pluto, with its unique and fascinating environment, provides a wealth of activities for those who embark on expeditions to this distant world. One of the most intriguing activities is studying and mapping Pluto's diverse landscape, including its vast plains, rugged mountain ranges, and intriguing geological features such as the famous \"heart\" shaped feature known as Tombaugh Regio. Another exciting activity is exploring Pluto's moon Charon, which boasts its own unique geology and may hold clues about the formation of the Pluto-Charon system. For those interested in technology and engineering, Pluto offers opportunities to test and refine spacecraft systems, as well as develop innovative methods for exploring and analyzing the planet's environment. Another thrilling activity is conducting flybys and close encounters with Pluto and Charon, yielding stunning views and new information about this intriguing world. With its many and varied activities, Pluto is a destination that promises to challenge and delight those who are committed to exploration and discovery.",
-
+    "safety": "Pluto, despite its remote location and challenging environment, necessitates a range of safety measures to ensure the well-being of explorers who embark on missions to this enigmatic dwarf planet. One of the primary safety concerns relates to the long duration of the journey, which spans approximately 15 years. Therefore, it is crucial to equip spacecraft with reliable life support systems capable of providing sustained and safe environments for the crew throughout the mission.",
     "durationValue": 5475,
     "cost": "$25 million",
     "costValue": 25000000,
@@ -150,6 +159,7 @@
     "distance": "10 billion ly.",
     "distanceValue": 10000000000000,
     "duration": "25 years",
+    "rating": 5,
 
     "overview": "Gargantua is a massive and rapidly spinning black hole that is orbited by a number of celestial bodies, including the planets Miller and Mann, as well as an unnamed neutron star. It is located within a year's flight of the main sequence star Pantagruel and the habitable planet Edmunds. Gargantua is also within a several week spaceflight of the Wormhole, which was one of the first discoveries made by NASA after sending probes through it. Although the Lazarus Missions did not engage in much study of Gargantua, NASA's interstellar relay was able to determine its gravitational influence on its planetary system. According to calculations by Kip Thorne, Gargantua is about 100 million solar masses, making it a supermassive black hole. It has an intense gravitational pull and spinning at an extremely high rate, which warps and distorts the space around it",
 

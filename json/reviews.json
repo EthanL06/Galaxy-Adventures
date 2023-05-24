@@ -2,6 +2,7 @@
   {
     "destination": "Low Earth Orbit",
     "review": 4,
+    "numberOfReviews": 75000,
     "comments": [
       {
         "name": "AdventurousExplorer",
@@ -18,20 +19,173 @@
     ]
   },
   {
-    "destination": "Mars",
-    "review": 4,
+    "destination": "Moon",
+    "review": 4.5,
+    "numberOfReviews": 90000,
     "comments": [
       {
-        "name": "AdventurousExplorer",
-        "comment": "Absolutely mesmerizing! Seeing Earth from space is a life-changing experience. The weightlessness and the views are out of this world. Just wish the trip could be a bit longer!"
+        "name": "MoonWalker",
+        "comment": "Walking on the Moon was a dream come true! The lunar landscape is like nothing on Earth. The feeling of low gravity was exhilarating. Wish there were more activities to do during the trip, though."
       },
       {
-        "name": "StellarTraveler",
-        "comment": "An incredible taste of space travel! The training was thorough, and the journey was smooth. Floating in zero gravity was surreal. Would highly recommend this as a starting point for space enthusiasts."
+        "name": "LunarExplorer",
+        "comment": "A monumental experience! Standing where humans first set foot on another celestial body is humbling. The moon buggy ride was a highlight, but the short duration left me craving for more moon adventures"
       },
       {
-        "name": "EarthGazer",
-        "comment": "Loved every moment! The breathtaking sunrises and sunsets were unforgettable. The only downside was the limited time spent in orbit. Could have stayed up there forever!"
+        "name": "StarGazer21",
+        "comment": "The moon's tranquility is unmatched. The vastness of space above and the desolate beauty below create an unforgettable ambiance. However, the lack of amenities and variety in food options was a minor letdown."
+      }
+    ]
+  },
+  {
+    "destination": "Mars",
+    "review": 4,
+    "numberOfReviews": 80000,
+    "comments": [
+      {
+        "name": "RedPlanetRover",
+        "comment": "Mars, the Red Planet, did not disappoint! The Martian landscape felt like stepping onto another world. The scientific experiments were fascinating, but the journey was long, and the living conditions were quite challenging."
+      },
+      {
+        "name": "SpacePioneerX",
+        "comment": "A daring adventure! Mars' rusty beauty and the potential for future colonization are captivating. However, the limited social interaction and the confinement of the habitats made it mentally and emotionally demanding."
+      },
+      {
+        "name": "CuriousTraveler",
+        "comment": "Exploring Mars was an unforgettable experience. The rovers and samples added to the thrill of discovery. Yet, the harsh environment and the lack of diverse activities made it feel like an isolated mission rather than a true vacation."
+      }
+    ]
+  },
+  {
+    "destination": "Venus",
+    "review": 2,
+    "numberOfReviews": 60000,
+    "comments": [
+      {
+        "name": "HotSeeker",
+        "comment": "Venus, the scorching inferno! The sheer heat and extreme atmospheric pressure made it an inhospitable destination. The limited visibility and lack of landing opportunities were disappointing. Definitely not for the faint-hearted."
+      },
+      {
+        "name": "SpaceVenturer87",
+        "comment": "The concept of exploring Venus was intriguing, but the reality fell short. The thick clouds and sulfuric acid atmosphere hindered visibility. The challenging conditions and lack of notable landmarks left me underwhelmed."
+      },
+      {
+        "name": "AstroAdventurer",
+        "comment": "Venus' harsh environment made it a tough journey. The extreme temperatures and corrosive atmosphere limited outdoor activities. I appreciate the scientific importance, but it wasn't the ideal vacation spot."
+      }
+    ]
+  },
+  {
+    "destination": "Jupiter",
+    "review": 4,
+    "numberOfReviews": 70000,
+    "comments": [
+      {
+        "name": "AstroEnthusiast",
+        "comment": "Jupiter's immense size is mind-boggling! The swirling storms and mesmerizing cloud bands create a captivating spectacle. Although the inability to land on its surface left me yearning for a closer encounter, the sheer magnitude of the planet was awe-inspiring."
+      },
+      {
+        "name": "GalacticExplorer",
+        "comment": "The colorful atmosphere of Jupiter is a sight to behold. Witnessing the massive storms and the ever-changing cloud patterns was a visual feast. While I wished for a more immersive experience, the distant observation still left a lasting impression."
+      },
+      {
+        "name": "PlanetHopper21",
+        "comment": "Jupiter's grandeur is breathtaking, but the absence of a landing opportunity dampened my excitement. Nevertheless, gazing at the planet's vastness and the prominent Great Red Spot was a humbling reminder of the vastness of the cosmos."
+      }
+    ]
+  },
+  {
+    "destination": "Saturn",
+    "review": 4,
+    "numberOfReviews": 80000,
+    "comments": [
+      {
+        "name": "RingWatcher",
+        "comment": "Saturn's iconic rings are a celestial marvel! The sheer beauty and elegance of the ring system were mesmerizing. Although I longed for a chance to step foot on Saturn itself, the up-close view of the intricate rings was a sight I'll never forget."
+      },
+      {
+        "name": "StellarVoyager",
+        "comment": "Saturn's rings are truly a cosmic gem. Witnessing their intricate details up close was an unforgettable experience. While I wished for more exploration opportunities, the enchanting view of Saturn's ring system made the journey worthwhile."
+      },
+      {
+        "name": "CosmicDreamer",
+        "comment": "Saturn's rings are a mesmerizing sight, and being able to observe them from a closer vantage point was a dream come true. Though the inability to explore the planet was a slight disappointment, the sheer beauty of the rings compensated for it."
+      }
+    ]
+  },
+  {
+    "destination": "Uranus",
+    "review": 3,
+    "numberOfReviews": 60000,
+    "comments": [
+      {
+        "name": "SpaceAdventurerX",
+        "comment": "Uranus, the enigmatic ice giant, offered a unique experience. Its pale blue hue and tilted axis provided a distinctive visual appeal. However, the lack of notable features and the inability to land left me yearning for more interactive elements."
+      },
+      {
+        "name": "CosmicExplorer21",
+        "comment": "Uranus' icy allure was intriguing, and its distinct axial tilt made it visually captivating. However, the limited visibility and absence of significant landmarks made the visit feel less immersive than expected."
+      },
+      {
+        "name": "AstroWanderlust",
+        "comment": "Exploring Uranus was an extraordinary opportunity, albeit with some limitations. The planet's serene blue color and its unusual orientation were fascinating. Yet, I hoped for a more engaging experience to truly appreciate the uniqueness of this celestial body."
+      }
+    ]
+  },
+  {
+    "destination": "Neptune",
+    "review": 4,
+    "numberOfReviews": 70000,
+    "comments": [
+      {
+        "name": "IntergalacticDreamer",
+        "comment": "Neptune's vibrant blue color and dynamic atmosphere were a treat for the senses. The sight of swirling storms and the Great Dark Spot was captivating. While I longed for a chance to explore the planet's surface, the overall experience was still mesmerizing."
+      },
+      {
+        "name": "CosmicVoyager",
+        "comment": "Visiting Neptune was like stepping into a surreal painting. The deep blue hues and the ever-changing cloud formations created an ethereal ambiance. Though I wished for more interactive activities, witnessing Neptune's beauty was an incredible journey."
+      },
+      {
+        "name": "StellarSeeker",
+        "comment": "Neptune's enigmatic charm and mysterious atmosphere were awe-inspiring. The distant observation allowed glimpses of its majestic storms and cloud patterns. While I craved a more immersive encounter, the journey to Neptune was a celestial voyage like no other."
+      }
+    ]
+  },
+  {
+    "destination": "Pluto",
+    "review": 3,
+    "numberOfReviews": 60000,
+    "comments": [
+      {
+        "name": "ExplorerY",
+        "comment": "Exploring Pluto was an intriguing adventure. Its icy surface and dwarf planet status added to its mystique. However, the extremely cold temperatures and limited visibility made it a challenging destination. I wished for more opportunities to explore its unique features."
+      },
+      {
+        "name": "AstroAdventurer21",
+        "comment": "Pluto, the dwarf planet at the edge of the solar system, held an undeniable charm. The icy landscapes and the possibility of encountering exotic geological formations were fascinating. Nonetheless, the distant nature of the visit left me craving for a more in-depth exploration."
+      },
+      {
+        "name": "CosmicTrailblazer",
+        "comment": "Venturing to Pluto was like embarking on a journey to the unknown. The distant and icy world offered glimpses of its captivating surface. Although the lack of landing opportunities limited the experience, the chance to witness Pluto's uncharted terrains was unforgettable."
+      }
+    ]
+  },
+  {
+    "destination": "Gargantua",
+    "review": 5,
+    "numberOfReviews": 50000,
+    "comments": [
+      {
+        "name": "AstroPhenomenon",
+        "comment": "Gargantua, the massive cosmic phenomenon, defied comprehension. Its awe-inspiring gravitational pull and the visual distortion around the event horizon left me in utter amazement. This mind-bending experience was truly beyond imagination."
+      },
+      {
+        "name": "StellarEpic",
+        "comment": "Words cannot capture the sheer magnitude of Gargantua. The immense gravitational forces and the mesmerizing spectacle of light bending around it were mind-boggling. This transcendent encounter pushed the boundaries of what we thought we knew about the cosmos."
+      },
+      {
+        "name": "CosmicExplorerX",
+        "comment": "Witnessing Gargantua was an indescribable experience. The mind-bending visuals and the sense of being in the presence of a cosmic giant were beyond words. This extraordinary encounter rewrote my perception of the universe."
       }
     ]
   }

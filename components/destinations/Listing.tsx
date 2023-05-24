@@ -14,6 +14,7 @@ import { useTodayDate } from "@/hooks/useTodayDate";
 import DateModal from "./DateModal";
 import TicketModal from "./TicketModal";
 import Link from "next/link";
+import ReviewItem from "./ReviewItem";
 
 type Props = {
   destination: Destination;
@@ -84,6 +85,7 @@ const Listing = ({ destination }: Props) => {
     cost,
     image,
     overview,
+    rating,
   } = destination;
 
   return (
@@ -116,7 +118,7 @@ const Listing = ({ destination }: Props) => {
         <div className="flex flex-col gap-y-4">
           <div>
             <h1 className="text-5xl font-bold">{title}</h1>
-            <p className="mt-1 text-lg text-gray-400">
+            <p className="mt-1 flex items-center text-lg text-gray-400">
               {distance} away • {duration} travel
             </p>
           </div>
@@ -169,6 +171,8 @@ const Listing = ({ destination }: Props) => {
           </div>
 
           <hr className="my-4 rounded-full border-gray-400" />
+
+          <Reviews destination={title} />
         </div>
 
         <div>
@@ -476,8 +480,33 @@ const Recommendations = ({ exclude }: { exclude: string }) => {
               distance={destination.distance}
               duration={destination.duration}
               title={destination.title}
+              rating={destination.rating}
             />
           ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const Reviews = ({ destination }: { destination: string }) => {
+  const { data, error, isLoading } = useSWR(
+    `/api/destinations/reviews?destination=${destination}`,
+    fetcher,
+    {
+      revalidateOnMount: true,
+    }
+  );
+
+  return (
+    <div className="flex flex-col gap-y-4">
+      {isLoading || !destination ? (
+        <div className="flex h-96 items-center justify-center">
+          <FontAwesomeIcon icon={faSpinner} spin size="3x" />
+        </div>
+      ) : (
+        <div className="flex w-full flex-wrap items-center justify-center gap-4 md:justify-between">
+          <ReviewItem review={data} />
         </div>
       )}
     </div>

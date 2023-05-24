@@ -9,6 +9,7 @@ export type Destination = {
 
   distanceValue: number;
   durationValue: number;
+  rating: number;
   costValue: number;
   amenities: string;
   activities: string;
